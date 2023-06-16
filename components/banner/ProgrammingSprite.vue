@@ -87,6 +87,7 @@ watch(isDark, (dark)=> {
       md:scale-[150%] lg:scale-[200%]      
     "
   >
+    <!-- Coding Sprite -->
     <div 
       class="
         w-full h-full absolute top-0 left-0 
@@ -97,9 +98,10 @@ watch(isDark, (dark)=> {
       :style="{ backgroundPosition: `${programming.currentFrame.value.x} ${programming.currentFrame.value.y}` }"
     ></div>
 
-    <!-- Cat -->
+    <!-- Cat Sprite-->
     <div 
       class="
+        dark:brightness-90
         w-[100px] h-[78px] absolute top-[26%] left-[67%]
         bg-no-repeat
         bg-[url('@/assets/img/sprites/cat.png')] 
