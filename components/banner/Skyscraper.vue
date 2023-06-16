@@ -28,7 +28,7 @@
     <!-- Moon -->
     <div 
       class="
-        opacity-0 dark:opacity-100 duration-700 animate-moon 
+        opacity-0 dark:opacity-100 duration-700 dark:animate-moon 
         dark:drop-shadow-[0_0_50px_rgba(250,250,250,1)]
         absolute top-0 left-0 
         w-full h-full

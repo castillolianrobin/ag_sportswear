@@ -1,95 +1,84 @@
 <script setup lang="ts">
-import { useDark } from '@vueuse/core';
-
-const isDark = useDark({ disableTransition: false });
-
 
 </script>
 
 <template>
-  <div id="app" class="scrollbar bg-primary-400 dark:bg-primary-950">
-    <!-- HEader -->
-    <header 
-      class="
-        z-20 
-        w-full 
-        px-5 py-2 
-        sticky top-0 
-        bg-primary-500 dark:bg-primary-900 
-        drop-shadow-lg 
-        text-white text-2xl font-serif 
-        flex justify-end gap-3
-      "
-    >
-      <h3 class="">Home</h3>
-      <h3 class="">About</h3>
-      <h3 class="">Tech</h3>
-      <h3 class="">Projects</h3>
-
-      <!-- Dark Mode Toggle -->
-      <div class="flex  items-center">
-        <ToggleDarkMode></ToggleDarkMode>
-      </div>
-    </header>
+  <div 
+    id="app" 
+    class="scrollbar bg-primary-400 dark:bg-primary-950"
+  >
+    <!-- Html Head -->
+    <Head>
+      <Title>Lian Robin</Title>
+    </Head>
+    <!-- Header -->
+    <Header></Header>
     
     <!-- Main Content  -->
     <Banner></Banner>
 
+    <main class="text-primary-950 dark:text-primary-200">
+      <!-- About -->
+      <ContentSection title="ABOUT">
+        <div class="text-sm md:text-lg">
 
-    <!-- About -->
+          
+          <p class="text-center">
+            If you only want to know about my professional background, you can click 
+            <a href="#" class="text-primary-700">here</a> to skip this section. If you want to know me on a personal level, you can scan through this section.  
+          </p>
 
-    <section class="p-5 dark:text-white">
-       <h2 class="mb-3 text-5xl font-bold font-serif text-primary-600 dark:text-primary-300">
-        ABOUT
-        </h2>
-
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-
-
-        <div v-if="false" class="mt-12 flex items-center">
-          <!-- Icon -->
-          <div class="px-24 flex-shrink-0 w-1/4">
-            <div class="bg-primary-500/25 rounded-full w-full aspect-square flex items-center justify-center">
-              <img 
-                src="./assets/img/keyboard.png" 
-                alt="keybs"
-                class="w-full scale-[200%]"
-              />
+          <div class="flex flex-col gap-12">
+            <!-- Dev -->
+            <div  class="flex flex-col md:flex-row gap-12 items-center">
+              <!-- Icon -->
+              <div class="mt-12 px-10 flex-shrink-0">
+                <div class="w-52 bg-primary-500/25  rounded-full aspect-square flex items-center justify-center">
+                  <img
+                    src="./assets/img/laptop.png" 
+                    alt="Lappy"
+                    class="ml-10 w-full scale-110"
+                  />
+                </div>
+              </div>
+              <!--  Content -->
+              <div class="mx-auto font-light">
+                <p class="text-end">
+                  You can call me <span class="font-semibold text-primary-500">Lian</span>. I am a Software Developer with a knack for solving problems and architecting codebase.
+                  I have solid experience in building maintainable, scalable, and reusable user interfaces.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Keyboard -->
+            <div  class="flex flex-col md:flex-row-reverse gap-12 items-center">
+              <!-- Icon -->
+              <div class="mr-4 first-line:mt-12 px-10 flex-shrink-0">
+                <div class="w-52 bg-primary-500/25 skew-x-6 rounded-full aspect-square flex items-center justify-center">
+                  <img
+                    src="./assets/img/keyboard-2.png" 
+                    alt="keybs"
+                    class="w-full md:scale-150"
+                  />
+                </div>
+              </div>
+              <!--  Content -->
+              <div class="mx-auto font-light">
+                <p class="text-start">
+                  I am also a keyboard enthusiast and currently own 2 keyboards both having a 75% layout and 
+                  one of them I have heavily modded  <span class="opacity-50 line-through">with sinister enthusiasm</span>. 
+                  I plan to collect more keyboard in the future with my end game being the Keychron Q2 Pro.
+                </p>
+              </div>
             </div>
           </div>
-          <!--  Content -->
-          <div class="px-20">
-            <p class="text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-
-        <div v-if="false" class="mt-12 flex-row-reverse flex items-center">
-          <!-- Icon -->
-          <div class="px-24 flex-shrink-0 w-1/4">
-            <div class="bg-primary-500/25 rounded-full w-full aspect-square flex items-center justify-center">
-              <img 
-                src="./assets/img/keyboard.png" 
-                alt="keybs"
-                class="w-full scale-[200%]"
-              />
-            </div>
-          </div>
-          <!--  Content -->
-          <div class="px-20">
-            <p class="text-justify">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>
-    </section>
     
-  <!-- <p class="bg-white text-black text-5xl z-50 h-full font-serif">Z z </p> -->
-
-    <!-- <NuxtWelcome /> -->
+    
+        </div>
+      </ContentSection>
+    
+    </main>
+    
   </div>
 </template>
 

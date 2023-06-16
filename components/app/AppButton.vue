@@ -2,7 +2,7 @@
 import { themedColorProps, useThemedColor } from '@/composables';
 import { computed, type ButtonHTMLAttributes, type PropType, toRef, unref } from 'vue';
 import type { RouteLocationRaw } from 'vue-router';
-import { AppLoading } from './';
+// import { AppLoading } from './';
 
 export type SizeProp = 'lg' | 'md' | 'sm';
 export type VariantProp = 'solid' | 'outline' | 'text';
@@ -77,11 +77,11 @@ const textClass = computed(()=>{
     :aria-busy="props.loading"
     v-bind="{ ...props }"
   >
-    <AppLoading 
+    <!-- <AppLoading 
       v-if="props.loading"
       class="absolute"
       v-bind="{ color }"
-    ></AppLoading>
+    ></AppLoading> -->
     <span :class="{ 'opacity-0': props.loading }">
       <slot></slot>
     </span>

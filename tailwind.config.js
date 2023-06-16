@@ -11,6 +11,16 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./app.vue",
   ],
+  safelist: [
+    {
+        pattern: /(bg|text|border|outline|fill)-(primary|secondary)-(200|300|500|700)/,
+        variants: ['active', 'hover', 'focus', 'group-focus-within', 'group-hover', 'disabled', 'even', 'dark'],
+      },
+      {
+        pattern: /(bg|text|border|outline)-(white|black)/,
+        variants: ['active', 'hover', 'focus', 'group-focus-within', 'group-hover', 'disabled', 'even'],
+      },
+    ],
   theme: {
     extend: {
       colors: {

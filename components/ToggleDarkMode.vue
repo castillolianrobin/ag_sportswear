@@ -60,10 +60,10 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
               },
             ]"
           >
-            <span v-if="isActive">
+            <span v-show="isActive">
               &#x263e;
             </span>
-            <span v-else>
+            <span v-show="!isActive">
               &#9788;
             </span>
           </div>

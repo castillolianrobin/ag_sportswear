@@ -39,7 +39,7 @@ const textSizeClass = computed(()=>{
     v-bind="{ ...$attrs }"
   >
     <slot>{{  props.label  }}</slot>
-    <span v-if="required" class="text-error-500">
+    <span v-show="required" class="text-error-500">
       *
     </span>
   </label>

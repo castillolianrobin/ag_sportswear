@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    '@vueuse/nuxt',
     // '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     "@nuxtjs/google-fonts",
@@ -21,6 +22,7 @@ export default defineNuxtConfig({
       }
     }
   },
+  
   // Tailwind Stuff
   colorMode: {
     classSuffix: '',

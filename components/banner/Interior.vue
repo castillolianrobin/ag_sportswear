@@ -3,10 +3,10 @@
     <!-- Wall -->
       <div 
       class="
+        blur-[2px]
         dark:brightness-50
         absolute top-0 left-0 
         w-full h-full
-        bg-no-repeat
         bg-[url('@/assets/img/sprite_bg.png')]
         bg-[length:100%] 
         bg-[50%_100%]
