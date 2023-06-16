@@ -8,7 +8,19 @@ const isDark = useDark({ disableTransition: false });
 
 <template>
   <div id="app" class="scrollbar bg-primary-400 dark:bg-primary-950">
-    <div class=" font-serif z-20 top-0 sticky w-full px-5 py-2 bg-primary-500 text-white text-2xl drop-shadow-lg flex justify-end gap-3">
+    <!-- HEader -->
+    <header 
+      class="
+        z-20 
+        w-full 
+        px-5 py-2 
+        sticky top-0 
+        bg-primary-500 dark:bg-primary-900 
+        drop-shadow-lg 
+        text-white text-2xl font-serif 
+        flex justify-end gap-3
+      "
+    >
       <h3 class="">Home</h3>
       <h3 class="">About</h3>
       <h3 class="">Tech</h3>
@@ -18,7 +30,7 @@ const isDark = useDark({ disableTransition: false });
       <div class="flex  items-center">
         <ToggleDarkMode></ToggleDarkMode>
       </div>
-    </div>
+    </header>
     
     <!-- Main Content  -->
     <Banner></Banner>

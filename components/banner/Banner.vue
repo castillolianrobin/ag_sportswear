@@ -38,10 +38,9 @@
 
 
     <!-- Call to action -->
-
-    <div class="transition-colors rounded-bl-3xl rounded-tr-3xl p-5 absolute  md:top-20 right-0 md:right-5 bg-primary-300/75 dark:bg-primary-900  shadow border-double border-8 border-primary-500 dark:border-primary-400 scale-50 md:scale-100">
+    <div class="transition-colors rounded-bl-3xl rounded-tr-3xl p-5 absolute md:top-20 -right-16 md:right-5 bg-primary-300/75 dark:bg-primary-900  shadow border-double border-8 border-primary-500 dark:border-primary-950 scale-50 md:scale-100">
       <h1 class="transition-colors text-primary-900 dark:text-primary-100 text-4xl lg:text-5xl font-semibold">Lian Robin Castillo</h1>
-      <h3 class="transition-colors mt-2 text-secondary-500 dark:text-secondary-400 text-xl lg:text-2xl text-right">Developer</h3>
+      <h3 class="transition-colors text-secondary-500 dark:text-secondary-400 text-2xl lg:text-4xl text-right font-serif">Developer</h3>
     </div>
   </div>
 </template>
