@@ -23,13 +23,14 @@ const showHeader = computed(()=>(y.value > 100))
       flex justify-end gap-3
       overflow-hidden
       transition-all
+      text-xs md:text-base
     "
     :class="showHeader ?  'max-h-full opacity-100 px-5 py-2' : 'max-h-0 opacity-0'"
   >
-    <AppButton variant="text" color="primary-200">Home</AppButton>
-    <AppButton variant="text" color="primary-200">About</AppButton>
-    <AppButton variant="text" color="primary-200">Tech</AppButton>
-    <AppButton variant="text" color="primary-200">Projects</AppButton>
+    <AppButton variant="text" color="primary-200" class="px-0">Home</AppButton>
+    <AppButton variant="text" color="primary-200" class="px-0">About</AppButton>
+    <AppButton variant="text" color="primary-200" class="px-0">Tech</AppButton>
+    <AppButton variant="text" color="primary-200" class="px-0">Projects</AppButton>
 
     <!-- Dark Mode Toggle -->
     <div class="flex  items-center">

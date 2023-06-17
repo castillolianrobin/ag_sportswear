@@ -15,6 +15,7 @@ const props = defineProps({
   variant: { type: String as PropType<VariantProp>, default: 'solid', required: false },
   ...themedColorProps,
   to: [String, Object] as PropType<RouteLocationRaw>,
+  href: String,
 });
 
 /** Theme color composable */
@@ -55,7 +56,14 @@ const textClass = computed(()=>{
 </script>
 
 <template>
-  <component :is="props.to && !props.disabled ? 'RouterLink' : 'button'"
+  <component 
+    :is="
+      props.to && !props.disabled 
+        ? 'RouterLink' 
+        : props.href && !props.disabled 
+          ? 'a' 
+          : 'button'
+        "
     :class="[ 
       ...[ sizeClass, bgClass, textClass, borderClass ],
       `focus:outline-${color}/25 outline-2`,

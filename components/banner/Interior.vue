@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Wall -->
-      <div 
+    <div 
       class="
         blur-[2px]
         dark:brightness-50
@@ -10,6 +10,7 @@
         bg-[url('@/assets/img/sprite_bg.png')]
         bg-[length:100%] 
         bg-[50%_100%]
+        
       "
     ></div>
 

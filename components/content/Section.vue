@@ -11,7 +11,7 @@ const props = defineProps({
   title: String,
   primaryColor: {
     type: Object as PropType<Color>,
-    default: { light: 'primary-700', dark: 'primary-200' },
+    default: { light: 'primary-700', dark: 'primary-300' },
   },
   secondaryColor: {
     type: Object as PropType<Color>,
@@ -27,9 +27,10 @@ const props = defineProps({
         w-full
         oveflow-hidden
         relative 
-        border-t-[12px] border-${props.primaryColor.light} dark:border-${props.primaryColor.light}
+        border-t-[12px] border-${props.primaryColor.light} dark:border-${props.primaryColor.dark}
         bg-${props.secondaryColor.light} dark:bg-${props.secondaryColor.dark}
       `"
+      v-bind="{ ...$attrs }"
     >
       <!-- Title Main Container -->
       <div
@@ -48,17 +49,17 @@ const props = defineProps({
             w-2/3 md:w-1/2
             -skew-x-[40deg] 
             bg-${props.secondaryColor.light} dark:bg-${props.secondaryColor.dark}
-            border-t-[12px] border-l-[12px] border-${props.primaryColor.light} dark:border-${props.primaryColor.light}          
+            border-t-[12px] border-l-[12px] border-${props.primaryColor.light} dark:border-${props.primaryColor.dark}          
           `"
         >
           <!-- Title -->
           <h2 
             :class="`
-              mt-2
+              mt-5
               text-center
               px-6 skew-x-[40deg] 
               bg-secondary-300 dark:bg-secondary-700
-              text-3xl md:text-5xl font-serif text-${props.primaryColor.light} dark:text-${props.primaryColor.dark}
+              text-2xl md:text-4xl font-serif text-${props.primaryColor.light} dark:text-${props.primaryColor.dark}
             `"
           >
             {{ props.title }}

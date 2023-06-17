@@ -32,8 +32,8 @@ module.exports = {
         success: colors.green,
       },
       fontFamily: {
-        'sans': ['Archivo'],
-        'serif': ['VT323']
+        // 'sans': ['Spartan'],
+        'serif': ['Pixel']
       },
       animation: {
         'moon': 'pulse 5s linear infinite',
