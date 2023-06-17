@@ -16,24 +16,26 @@ const showHeader = computed(()=>(y.value > 100))
     class="
       z-20 
       w-full  
-      sticky top-0 
-      bg-primary-500 dark:bg-primary-900 
+      fixed top-0  
       drop-shadow-lg 
-      text-white text-2xl font-serif 
+      text-white text-2xl 
       flex justify-end gap-3
       overflow-hidden
-      transition-all
       text-xs md:text-base
     "
-    :class="showHeader ?  'max-h-full opacity-100 px-5 py-2' : 'max-h-0 opacity-0'"
-  >
-    <AppButton variant="text" color="primary-200" class="px-0">Home</AppButton>
-    <AppButton variant="text" color="primary-200" class="px-0">About</AppButton>
-    <AppButton variant="text" color="primary-200" class="px-0">Tech</AppButton>
-    <AppButton variant="text" color="primary-200" class="px-0">Projects</AppButton>
+    >
+    <div 
+      class="px-5 flex gap-3 bg-primary-500/50 transition-all"
+      :class="showHeader ?  'max-h-full opacity-100 px-5 py-2' : 'max-h-0 opacity-0'"
+    >
+      <AppButton variant="text" color="primary-200" class="px-0">Home</AppButton>
+      <AppButton variant="text" color="primary-200" class="px-0">About</AppButton>
+      <AppButton variant="text" color="primary-200" class="px-0">Tech</AppButton>
+      <AppButton variant="text" color="primary-200" class="px-0">Projects</AppButton>
+    </div>
 
     <!-- Dark Mode Toggle -->
-    <div class="flex  items-center">
+    <div class="my-2 md:my-5 flex items-center">
       <ToggleDarkMode></ToggleDarkMode>
     </div>
   </header>

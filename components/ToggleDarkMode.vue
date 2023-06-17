@@ -27,8 +27,8 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
         tabindex="0"
         class="
           p-[1px] 
-          mx-2 
-          w-9 h-5 
+          mx-1
+          w-11 h-6 
           border border-primary-900 dark:border-primary-300 
           rounded-full
           focus:outline outline-1 outline-primary-600 dark:outline-primary-300
@@ -38,7 +38,7 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
         "
         @keypress.space="onChangeHandler"
       >
-        <div class=" relative w-full h-full">
+        <div class="relative w-full h-full">
           <div 
             class="
               absolute 
@@ -52,7 +52,6 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
               text-primary-800 dark:text-primary-100
               bg-primary-200 dark:bg-primary-800 
               shadow 
-
             "
             :class="[
               {

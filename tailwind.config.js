@@ -32,7 +32,7 @@ module.exports = {
         success: colors.green,
       },
       fontFamily: {
-        // 'sans': ['Spartan'],
+        'sans': ['Chakra Petch'],
         'serif': ['Pixel']
       },
       animation: {

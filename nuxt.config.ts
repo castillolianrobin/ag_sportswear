@@ -14,9 +14,12 @@ export default defineNuxtConfig({
   googleFonts: {
     display: "swap",
     families: {
-      Archivo: {
-        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+      'Chakra Petch': {
+        wght: [300, 400, 500, 600, 700],
       },
+      // Archivo: {
+      //   wght: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+      // },
       VT323: {
         wght: [400]
       }

@@ -8,7 +8,7 @@
         w-full h-full
         bg-[url('@/assets/img/night.jpg')]
         bg-[length:auto_250%]
-        bg-[0%_90%]
+        bg-[40%_90%] md:bg-[0%_90%]
         transition-all duration-500  ease-in-out
       "
     ></div>
@@ -22,7 +22,7 @@
         w-full h-full
         bg-[url('@/assets/img/day.jpg')]
         bg-[length:auto_250%] 
-        bg-[-0%_90%]
+        bg-[40%_90%] md:bg-[-0%_90%]
         transition-all duration-500  ease-in-out
       "
     ></div>
@@ -37,7 +37,7 @@
         bg-[url('@/assets/img/moon.png')]
         bg-[length:auto_250%] bg-no-repeat 
         drop
-        bg-[-0%_100%] dark:bg-[-0%_90%]
+        bg-[40%_100%] md:bg-[0%_100%] dark:bg-[40%_90%] md:dark:bg-[0%_90%] 
         transition-all ease-in-out
       "
     ></div>
