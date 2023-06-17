@@ -8,11 +8,6 @@
   src: url(../fonts/PixelGameFont.ttf);
 }
 
-@font-face {
-  font-family: Spartan;
-  src: url(../fonts/LeagueSpartan-Bold.otf);
-}
-
 
 html, body, #app {
   height: 100%;

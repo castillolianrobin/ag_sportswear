@@ -17,9 +17,20 @@
     <!-- Main Content  -->
     <Banner></Banner>
 
-    <main class="text-primary-950 dark:text-primary-200">
+    <!-- Content -->
+    <main 
+      class="
+        hidden
+        md:fixed
+        top-0 right-2
+        text-primary-950 dark:text-primary-200
+        bg-primary-
+        h-full
+      "
+    >
+    asdada
       <!-- About -->
-      <ContentAboutSection></ContentAboutSection>
+      <!-- <ContentAboutSection></ContentAboutSection> -->
     
     </main>
     

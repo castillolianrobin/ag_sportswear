@@ -15,7 +15,7 @@ const props = defineProps({
   },
   secondaryColor: {
     type: Object as PropType<Color>,
-    default: { light: 'secondary-300', dark: 'secondary-700' },
+    default: { light: 'accent-50', dark: 'accent-950' },
   },
 })
 </script>
@@ -58,8 +58,8 @@ const props = defineProps({
               mt-5
               text-center
               px-6 skew-x-[40deg] 
-              bg-secondary-300 dark:bg-secondary-700
-              text-2xl md:text-4xl font-serif text-${props.primaryColor.light} dark:text-${props.primaryColor.dark}
+              bg-${secondaryColor.light} dark:bg-${secondaryColor.dark}
+              text-lg md:text-4xl font-serif text-${props.primaryColor.light} dark:text-${props.primaryColor.dark}
             `"
           >
             {{ props.title }}

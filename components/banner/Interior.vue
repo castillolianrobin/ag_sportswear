@@ -3,15 +3,14 @@
     <!-- Wall -->
     <div 
       class="
-        blur-[2px]
         dark:brightness-50
         absolute top-0 left-0 
         w-full h-full
-        bg-[url('@/assets/img/sprite_bg.png')]
+        bg-[url('@/assets/img/new-bg.png')]
         bg-[length:100%] 
-        bg-[50%_100%]
-        
+        bg-blend-luminosity
       "
+      style="background-position: bottom 12% right 0"
     ></div>
 
     <!-- Ambiance -->
@@ -27,5 +26,6 @@
         transition duration-500
       "
     ></div>
+
   </div>
 </template>

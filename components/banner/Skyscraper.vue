@@ -3,10 +3,11 @@
     <!-- Night  -->
     <div 
       class="
+        blur-[3px]
         absolute top-0 left-0 
         w-full h-full
         bg-[url('@/assets/img/night.jpg')]
-        bg-[length:auto_250%] bg-no-repeat
+        bg-[length:auto_250%]
         bg-[0%_90%]
         transition-all duration-500  ease-in-out
       "
@@ -15,11 +16,12 @@
     <!-- Day -->
     <div 
       class="
+        blur-[3px]
         dark:opacity-0
         absolute top-0 left-0 
         w-full h-full
         bg-[url('@/assets/img/day.jpg')]
-        bg-[length:auto_250%] bg-no-repeat 
+        bg-[length:auto_250%] 
         bg-[-0%_90%]
         transition-all duration-500  ease-in-out
       "

@@ -1,9 +1,9 @@
 <template>
-  <ContentSection title="ABOUT">
+  <ContentSection title="about">
     <div class="text-sm md:text-lg" id="about">
 
 
-      <p class="text-center text-sm">
+      <p class="text-center text-xs md:text-sm">
         If you only want to know about my professional background, you can click 
         <a href="#" class="text-primary-700">here</a> to skip this section. If you want to know me on a personal level, you can scan through this section.  
       </p>
@@ -58,8 +58,8 @@
             </div>
           </template>
 
-          <template #text>
-           I'm also into cycling and does a few loops within my city whenever I'm free.
+        <template #text>
+           I'm also into cycling and does a few loops within my city whenever I'm free. 
           </template>
         </ContentAboutSectionContent>
       </div>

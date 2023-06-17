@@ -87,6 +87,7 @@ watch(isDark, (dark)=> {
       md:scale-[150%] lg:scale-[200%]      
     "
   >
+    <div></div>
     <!-- Coding Sprite -->
     <div 
       class="
