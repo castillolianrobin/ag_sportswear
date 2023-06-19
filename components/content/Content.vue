@@ -101,7 +101,8 @@ function isActive(sectionName: SectionName) {
         md:border-2 border-primary-900 dark:border-primary-400 
         md:rounded
         overflow-auto scrollbar
-        transition-all duration-200
+        transition-all duration-200 
+        backdrop-blur
       "
       :class="`${ showContent ? 'md:scale-100 md:opacity-100 ease-in-out'  : 'md:scale-50 md:opacity-0' }`"
     >

@@ -1,12 +1,27 @@
 <script setup lang="ts">
 // import { useWindowScroll } from '@vueuse/core';
 
-
-
+/** Window Scroll compsoable */
 const { y } = useWindowScroll();
 
+/** Internal Logic */
 
 const showHeader = computed(()=>(y.value > 100))
+
+const SOCIALS = [
+  {
+    title: 'LinkedIn',
+    img: 'https://cdn-icons-png.flaticon.com/512/49/49408.png',
+    link: 'https://www.linkedin.com/in/lianrobincastillo/',
+    class: ''
+  },
+  {
+    title: 'GitHub',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png',
+    link: 'https://github.com/castillolianrobin',
+    class: 'brightness-0'
+  },
+];
 
 
 </script>
@@ -32,9 +47,42 @@ const showHeader = computed(()=>(y.value > 100))
       <AppButton href="#projects" variant="text" color="primary-200" class="px-0">Projects</AppButton>
     </div>
 
+    <!-- Socials -->
+    <div class="md:ml-auto flex items-center gap-3">
+      <a
+        v-for="social in SOCIALS"
+        :key="social.link" 
+        :href="social.link"
+        target="_blank"
+        class="
+          p-1 
+          rounded-full 
+          hover:brightness-125 
+          bg-primary-300 dark:bg-primary-900 
+          shadow 
+          border border-primary-500
+          transition-all
+        "
+      >
+        <img 
+          :src="social.img" 
+          :alt="social.title"
+          class="
+            w-4
+            aspect-square 
+            grayscale-100
+            dark:invert
+            opacity-90
+          "
+          :class="social?.class"
+        />
+      </a>
+    </div>
+
+    
     <!-- Dark Mode Toggle -->
     <div class="my-2 md:my-5 flex items-center">
-      <ToggleDarkMode></ToggleDarkMode>
+      <ToggleDarkMode class="  animate-pulse-once"></ToggleDarkMode>
     </div>
   </header>
 </template>

@@ -10,6 +10,7 @@ const props = defineProps({
 
 const emits = defineEmits(['update:activeSection']);
 
+/** Internal Logic */
 
 function setActiveSection(sectionName: SectionName) {
   emits('update:activeSection', sectionName);
@@ -18,7 +19,6 @@ function setActiveSection(sectionName: SectionName) {
 
 function scrollToElement(id: SectionName)  {
   const el = document.getElementById(id);
-  console.log('testing', el, `#${id}`)
   if (el) {
     el.scrollIntoView();
   }
@@ -48,6 +48,7 @@ function scrollToElement(id: SectionName)  {
         bg-secondary-300/90 dark:bg-secondary-900/90
         border-primary-900 dark:border-primary-400 border-2 
         rounded
+        md:backdrop-blur
       "
     >
       <!-- Grain -->
@@ -76,8 +77,14 @@ function scrollToElement(id: SectionName)  {
       >
         Lian Robin Castillo
       </h1>
-
-      <h3 class="ml-0.5 my-1 text-secondary-950 dark:text-secondary-200">Frontend Developer</h3>
+      
+      <!-- Details -->
+      <div class="w-full flex flex-col md:flex-row md:gap-3">
+        <!-- Title -->
+        <h3 class="ml-0.5 my-1 text-secondary-950 dark:text-secondary-200">
+          Frontend Developer
+        </h3>
+      </div>
     </div>
     <!-- Controls -->
     <div 

@@ -53,11 +53,7 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
               bg-primary-200 dark:bg-primary-800 
               shadow 
             "
-            :class="[
-              {
-                'translate-x-full': isActive 
-              },
-            ]"
+            :class="isDarkMode ? 'translate-x-full' : 'translate-x-0'"
           >
             <span v-show="isActive">
               &#x263e;
