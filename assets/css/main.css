@@ -19,7 +19,7 @@ html, body, #app {
 html::-webkit-scrollbar, .scrollbar::-webkit-scrollbar {
   width: 0.5vw;
   height: 10px;  
-  @apply bg-indigo-300;
+  @apply bg-indigo-300/10;
   /* background-color: ; */
 }
 

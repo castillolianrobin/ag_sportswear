@@ -20,7 +20,7 @@ const loading = ref(false);
     <div 
       class="
         relative 
-        w-full h-[270px] md:h-[95vh] 
+        w-full h-[350px] md:h-[100vh] 
         overflow-hidden 
         bg-sky-700/50 dark:bg-indigo-900/80 
         transition-colors
@@ -69,12 +69,12 @@ const loading = ref(false);
     <!-- Fader -->
     <div 
       class="
+        md:hidden
         -mt-[10vh] 
-        h-[20vh] md:h-[15vh] 
+        h-[12vh] md:h-[15vh] 
         relative
         bg-gradient-to-b
         from-transparent
-        via-primary-950 
         to-primary-950
       "
     ></div>
