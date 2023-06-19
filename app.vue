@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { SectionName } from './components/content/Content.vue';
 
+
+const activeSection = ref<SectionName | null>(null)
 </script>
 
 <template>
@@ -15,10 +18,17 @@
     <Header></Header>
     
     <!-- Main Content  -->
-    <Banner></Banner>
+    <div class="relative">
+      <Banner></Banner>
+      
+      <BannerCallToAction
+        v-model:active-section="activeSection"
+      ></BannerCallToAction>
+    </div>
 
     <!-- Content -->
-    <main 
+    <Content v-model:active-section="activeSection"></Content>
+    <!-- <main 
       v-if="false"
       class="
         md:hidden
@@ -32,24 +42,12 @@
         bg-primary-200/90
       "
     >
-      <!-- Grain -->
-      <div 
-        class="
-          transition
-          absolute top-0 left-0 opacity-20
-          animate-grain
-          w-full h-full
-          bg-[length:300%]
-          bg-[url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png)]
-        " 
-      ></div>
       <div class="mt-20 relative">
         asdadasdasdasio hasdioha dsiopah ioashd apiosdh apioh dapiosh apsiodh asiopdh paiosdh
-        <!-- About -->
         <ContentAboutSection></ContentAboutSection>
       </div>
     
-    </main>
+    </main> -->
     
   </div>
 </template>

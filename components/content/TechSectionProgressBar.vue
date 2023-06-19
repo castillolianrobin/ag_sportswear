@@ -1,0 +1,28 @@
+<script setup lang="ts">
+  const props = defineProps({
+    skillName: String,
+    rating: Number,  
+  })
+</script>
+
+<template>
+  <div class="w-full bg-secondary-500/25">
+    <div 
+      class="
+        p-1
+        h-full
+        w-fit
+        rounded-sm
+        bg-gradient-to-r
+        from-transparent
+        to-primary-700 dark:to-primary-400
+        text-primary-950 dark:text-primary-300
+        transition-all ease-out duration-500
+      "
+      :style="{ minWidth: `${(props.rating || 0)*10}%` }"
+    >
+      {{ props.skillName }}
+    </div>
+  </div>
+
+</template>

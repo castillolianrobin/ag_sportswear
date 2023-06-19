@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+const loading = ref(false);
+
 </script>
 
 <template>
@@ -23,34 +25,45 @@
         bg-sky-700/50 dark:bg-indigo-900/80 
         transition-colors
         ease-in
-  
       "
     >
-      <!-- Sky scraper night/day -->
-      <BannerSkyscraper></BannerSkyscraper>
+      <div class="w-full h-full absolute" :class="{ 'blur': loading  }">
+        <!-- Sky scraper night/day -->
+        <BannerSkyscraper></BannerSkyscraper>
+    
+        <!-- Wall -->
+        <BannerInterior></BannerInterior>
+        
+        <!-- Programming Sprite -->
+        <BannerProgrammingSprite></BannerProgrammingSprite>
+        
+        <!-- Foreground Ambiance -->
+        <div
+          class="
+            absolute top-0 left-0
+            w-full h-full
+            bg-gradient-to-r dark:bg-gradient-to-tr
+            from-slate-950/30 from-5% dark:from-amber-400/10
+            via-sky-500/5 via-90% dark:via-slate-950/70
+            to-slate-950 dark:to-slate-950
+            opacity-100
+            transition
+          "
+        ></div>
+      </div>
   
-      <!-- Wall -->
-      <BannerInterior></BannerInterior>
-      
-      <!-- Programming Sprite -->
-      <BannerProgrammingSprite></BannerProgrammingSprite>
-      
-      <!-- Foreground Ambiance -->
+      <!-- Loading -->
       <div
+        v-if="loading" 
         class="
-          absolute top-0 left-0
-          w-full h-full
-          bg-gradient-to-r dark:bg-gradient-to-tr
-          from-slate-950/30 from-5% dark:from-amber-400/10
-          via-sky-500/5 via-90% dark:via-slate-950/70
-          to-slate-950 dark:to-slate-950
-          opacity-100
-          transition
+          absolute w-full h-full bg-secondary-200/50 dark:bg-secondary-600/75
+          flex items-center justify-center
         "
-      ></div>
-  
-    <BannerCallToAction></BannerCallToAction>
-
+      >
+        <span class="text-2xl font-bold text-secondary-500 dark:text-secondary-400 drop-shadow">
+          Loading...
+        </span>
+      </div>
     </div>
     
     <!-- Fader -->

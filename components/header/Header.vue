@@ -15,23 +15,21 @@ const showHeader = computed(()=>(y.value > 100))
   <header 
     class="
       z-20 
-      w-full  
-      fixed top-0  
+      fixed top-0 right-2
       drop-shadow-lg 
-      text-white text-2xl 
+      text-white 
       flex justify-end gap-3
       overflow-hidden
-      text-xs md:text-base
+      text-xs md:text-base 2xl:text-2xl
     "
     >
     <div 
-      class="px-5 flex gap-3 bg-primary-500/50 transition-all"
-      :class="showHeader ?  'max-h-full opacity-100 px-5 py-2' : 'max-h-0 opacity-0'"
+      class="flex gap-3 bg-primary-500/75 transition-all rounded"
+      :class="showHeader ?  'max-h-full opacity-100 px-5' : 'max-h-0 opacity-0'"
     >
-      <AppButton variant="text" color="primary-200" class="px-0">Home</AppButton>
-      <AppButton variant="text" color="primary-200" class="px-0">About</AppButton>
-      <AppButton variant="text" color="primary-200" class="px-0">Tech</AppButton>
-      <AppButton variant="text" color="primary-200" class="px-0">Projects</AppButton>
+      <AppButton href="#" variant="text" color="primary-200" class="px-0">Home</AppButton>
+      <AppButton href="#stack" variant="text" color="primary-200" class="px-0">Tech</AppButton>
+      <AppButton href="#projects" variant="text" color="primary-200" class="px-0">Projects</AppButton>
     </div>
 
     <!-- Dark Mode Toggle -->

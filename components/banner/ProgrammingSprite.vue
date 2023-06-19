@@ -36,6 +36,7 @@ const continousCoding = [
 const programming = useSpriteAnimation(continousCoding);
 
 
+
 /** Cat Logic */
 
 const catAnim = {
