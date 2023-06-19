@@ -16,7 +16,8 @@
         bg-gradient-to-r
         from-transparent
         to-primary-700 dark:to-primary-400
-        text-primary-950 dark:text-primary-300
+        font-semibold
+        text-primary-900 dark:text-primary-300
         transition-all ease-out duration-500
       "
       :style="{ minWidth: `${(props.rating || 0)*10}%` }"

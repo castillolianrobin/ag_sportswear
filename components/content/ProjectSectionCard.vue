@@ -4,19 +4,25 @@ const props = defineProps({
   img: String,
   title: String,
   description: String,
+  link: String,
   stack: Array as PropType<string[]> 
 })
 
 </script>
 
 <template>
-  <div 
+  <a 
     class="
       p-2
+      cursor-pointer
+      hover:scale-[101%]
+      bg-primary-200 hover:bg-primary-50 dark:bg-primary-950 dark:hover:bg-primary-900
       border-primary-500
-      bg-primary-200 dark:bg-primary-950
       overflow-hidden rounded shadow
+      transition-all
     "
+    :href="props.link"
+    target="_blank"
   >
     <div class="flex gap-3">
       <!-- Image -->
@@ -32,21 +38,21 @@ const props = defineProps({
         <!-- Title -->
         <h3 class="font-semibold">{{ props.title  }}</h3>
         <!-- Description -->
-        <p class="text-secondary-500">
+        <p class="text-secondary-600 dark:text-secondary-400 text-sm">
           {{ props.description || 'No Description'  }}
         </p>
       </div>
     </div>
 
-    <!-- Stack -->
+    <!-- Stack Badges -->
     <div class="my-3 flex flex-wrap gap-3 text-secondary-200">
       <span 
         v-for="techStack in props.stack"
         :key="`${props.title}-${techStack}`"
-        class="px-3 rounded-full bg-primary-500"
+        class="px-3 rounded-full bg-primary-500 text-sm shadow"
       >
         {{ techStack }}
       </span>
     </div>
-  </div>
+  </a>
 </template>

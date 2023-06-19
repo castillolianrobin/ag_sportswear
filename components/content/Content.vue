@@ -74,7 +74,7 @@ function isActive(sectionName: SectionName) {
         class="
           text-primary-950 dark:text-primary-200
           text-2xl
-          drop-shadow-sm
+          drop-shadow-sm shadow-white
         "
       >
         {{ sectionNameComputed }}

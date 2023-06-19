@@ -13,6 +13,9 @@ const emits = defineEmits(['update:activeSection']);
 /** Internal Logic */
 
 function setActiveSection(sectionName: SectionName) {
+  if (props.activeSection === sectionName) {
+    return emits('update:activeSection', null);
+  }
   emits('update:activeSection', sectionName);
   scrollToElement(sectionName);
 }
@@ -54,8 +57,9 @@ function scrollToElement(id: SectionName)  {
       <!-- Grain -->
       <!-- <div 
         class="
+          
           transition
-          absolute top-0 left-0 opacity-30
+          absolute top-0 left-0 opacity-30 dark:brightness-50
           animate-grain
           w-full h-full
           bg-[length:200%]
