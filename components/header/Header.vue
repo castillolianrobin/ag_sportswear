@@ -39,7 +39,7 @@ const SOCIALS = [
     "
     >
     <div 
-      class="flex gap-3 bg-primary-500/75 transition-all rounded"
+      class="flex gap-3 bg-primary-500/80 transition-all rounded"
       :class="showHeader ?  'max-h-full opacity-100 px-5' : 'max-h-0 opacity-0'"
     >
       <AppButton href="#" variant="text" color="primary-200" class="px-0">Home</AppButton>

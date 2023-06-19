@@ -70,6 +70,14 @@ function isActive(sectionName: SectionName) {
       class="mb-5 hidden md:flex gap-3"
       :class="showContent ? 'visible' : 'invisible'"
     >
+      
+      <AppButton 
+        size="sm"
+        class="py-0"
+        @click="emits('update:activeSection', null)"
+      >
+        <span class="mx-2 text-sm">&#10006;</span>
+      </AppButton>
       <h3 
         class="
           text-primary-950 dark:text-primary-200
@@ -79,14 +87,6 @@ function isActive(sectionName: SectionName) {
       >
         {{ sectionNameComputed }}
       </h3>
-
-      <AppButton 
-        size="sm"
-        class="py-0"
-        @click="emits('update:activeSection', null)"
-      >
-        Hide
-      </AppButton>
     </div>
 
     <!-- Content -->
@@ -96,13 +96,14 @@ function isActive(sectionName: SectionName) {
         p-5
         h-full
         relative 
-        bg-secondary-100/75 dark:bg-secondary-950/75
+        bg-secondary-100  dark:bg-secondary-950
+        md:bg-opacity-75
         text-secondary-950 dark:text-secondary-100
         md:border-2 border-primary-900 dark:border-primary-400 
         md:rounded
         overflow-auto scrollbar
         transition-all duration-200 
-        backdrop-blur
+        backdrop-blur shadow
       "
       :class="`${ showContent ? 'md:scale-100 md:opacity-100 ease-in-out'  : 'md:scale-50 md:opacity-0' }`"
     >

@@ -9,7 +9,7 @@
   <div class="w-full bg-secondary-500/25">
     <div 
       class="
-        p-1
+        p-2 2xl:py-3
         h-full
         w-fit
         rounded-sm

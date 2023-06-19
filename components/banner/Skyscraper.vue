@@ -37,7 +37,7 @@
         bg-[url('@/assets/img/moon.png')]
         bg-[length:auto_250%] bg-no-repeat 
         drop
-        bg-[40%_100%] md:bg-[0%_100%] dark:bg-[40%_90%] md:dark:bg-[0%_90%] 
+        bg-[40%_100%] md:bg-[0%_100%] dark:bg-[40%_80%] md:dark:bg-[0%_90%] 
         transition-all ease-in-out
       "
     ></div>

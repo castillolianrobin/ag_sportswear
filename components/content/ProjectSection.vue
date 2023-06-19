@@ -26,7 +26,7 @@ const projects = [
   
   {
     title: 'Sample Pokedex',
-    description: 'Basic UI Implementation for 3rd party API courtesy of https://pokeapi.co/.',
+    description: 'Basic UI Implementation for 3rd party API courtesy of https://pokeapi.co.',
     img: 'https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png',
     link: 'https://sample-pokedex.netlify.app/',
     stack: ['Vue', 'Typescript', 'Tailwind',]

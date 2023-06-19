@@ -27,7 +27,7 @@ const { color } = useThemedColor(toRef(props, 'color'));
 const sizeClass = computed(()=>{
   switch (props.size) {
     case 'lg': return 'text-lg py-1.5 px-2.5';  
-    case 'sm': return 'text-sm px-1 py-0.5';  
+    case 'sm': return 'text-sm px-1';  
     case 'md': default: return 'py-1 px-2';
   }
 });

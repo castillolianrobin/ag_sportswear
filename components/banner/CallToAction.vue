@@ -14,9 +14,10 @@ const emits = defineEmits(['update:activeSection']);
 
 function setActiveSection(sectionName: SectionName) {
   if (props.activeSection === sectionName) {
-    return emits('update:activeSection', null);
+    emits('update:activeSection', null);
+  } else {
+    emits('update:activeSection', sectionName);
   }
-  emits('update:activeSection', sectionName);
   scrollToElement(sectionName);
 }
 
@@ -41,6 +42,7 @@ function scrollToElement(id: SectionName)  {
       left-0 md:left-5   2xl:left-12
       md:scale-100 2xl:scale-100 
       flex flex-col items-start
+      transition-all
     "
   >
 
@@ -54,18 +56,6 @@ function scrollToElement(id: SectionName)  {
         md:backdrop-blur
       "
     >
-      <!-- Grain -->
-      <!-- <div 
-        class="
-          
-          transition
-          absolute top-0 left-0 opacity-30 dark:brightness-50
-          animate-grain
-          w-full h-full
-          bg-[length:200%]
-          bg-[url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png)]
-        " 
-      ></div> -->
 
       <!-- Name -->
       <h1 
@@ -85,7 +75,7 @@ function scrollToElement(id: SectionName)  {
       <!-- Details -->
       <div class="w-full flex flex-col md:flex-row md:gap-3">
         <!-- Title -->
-        <h3 class="ml-0.5 my-1 text-secondary-950 dark:text-secondary-200">
+        <h3 class="ml-0.5 my-1 text-secondary-950 dark:text-secondary-200 2xl:text-xl">
           Frontend Developer
         </h3>
       </div>
@@ -93,12 +83,10 @@ function scrollToElement(id: SectionName)  {
     <!-- Controls -->
     <div 
       class="
-        py-2 pl-2 
+        py-2 2xl:py-7 pl-2 
         relative
-        flex flex-col items-start gap-1 2xl:gap-5 
-        text-sm 2xl:text-xl font-bold 
-        "
-        dark:text-primary-500
+        flex flex-col items-start justify-stretch gap-1 2xl:gap-5 
+      "
     >
       
       <!-- <AppButton variant="text" color="primary-200" href="#about">About</AppButton> -->
