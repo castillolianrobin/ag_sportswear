@@ -70,9 +70,15 @@ const catAnim = {
 
 const cat = useSpriteAnimation(catAnim.idling, 300); 
 
+function catHovered(hovered: boolean) {
+  if (hovered)
+    cat.runAnimation(isDark.value ? [catAnim.wakingUp[1]] : [catAnim.wakingUp[3]], true);
+  else {
+    cat.runAnimation((isDark.value ? catAnim.sleeping : catAnim.idling), true)
+  }
+}
 
 watch(isDark, (dark)=> {
-  console.log('dark',dark)
   if (dark) {
     cat.runAnimation([...catAnim.wakingUp].reverse(), false, catAnim.sleeping);
   } else {
@@ -107,13 +113,15 @@ watch(isDark, (dark)=> {
     <!-- Cat Sprite-->
     <div 
       class="
-        dark:brightness-90
+        cursor-pointer
+        hover:brightness-110 dark:brightness-90 dark:hover:brightness-105
         w-[100px] h-[78px] absolute top-[26%] left-[67%]
         bg-no-repeat
         bg-[url('@/assets/img/sprites/cat.png')] 
         bg-[length:auto_100%] 
       "
       :style="{ backgroundPosition: `${cat.currentFrame.value.x} ${cat.currentFrame.value.y}` }"
+      @click="isDark = !isDark"
     ></div>
 
   </div>

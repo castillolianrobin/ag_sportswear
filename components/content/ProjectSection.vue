@@ -4,7 +4,7 @@
 const projects = [
   {
     title: 'Component Kits (Vue)',
-    description: 'A set of reusable and themeable Vue components to be used with dashboard related projects.',
+    description: 'A set of reusable and themeable Vue 3 components to be used with dashboard related projects.',
     img: 'https://raw.githubusercontent.com/castillolianrobin/vue-vite-component-kits/main/public/home_sample.png',
     link: 'https://component-kits-vue3.netlify.app/',
     stack: ['Vue', 'Typescript', 'Tailwind', 'Vitest', 'Cypress']
@@ -35,7 +35,7 @@ const projects = [
   
   {
     title: 'Pocketyard Dashboard',
-    description: 'Construction E-commerce/E-bidding provider based on US. Web dashboard was implemented using Vuw 2',
+    description: 'Construction E-commerce/E-bidding provider based on US. Web dashboard was implemented using Vue 2',
     img: 'https://pocketyard.com/img/logo_named.b5d74e2a.png',
     link: 'https://pocketyard.com/#/',
     stack: ['Vue', 'Bootstrap', 'AWS']
