@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   // Fonts
   googleFonts: {
-    display: "swap",
+    preload: true,
     families: {
       'Chakra Petch': {
         wght: [300, 400, 500, 600, 700],
