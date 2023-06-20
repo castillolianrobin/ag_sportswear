@@ -7,9 +7,7 @@ const isDark = useDark({ disableTransition: false });
 
 /** Programming Logic */
 const lookininWindowSprite = [
-  { x: '-1481px', y: '0' },
-  { x: '-1481px', y: '0' },
-  { x: '-1481px', y: '0' },
+  { x: '-1489.3px', y: '0' },
 ];
 
 const codingLeft = [
@@ -36,6 +34,10 @@ const continousCoding = [
 const programming = useSpriteAnimation(continousCoding);
 
 
+function stopCoding(stop: boolean) {
+  if (stop) programming.runAnimation(lookininWindowSprite, true);
+  else programming.runAnimation(continousCoding);
+}
 
 /** Cat Logic */
 
@@ -88,7 +90,6 @@ watch(isDark, (dark)=> {
       md:scale-[150%] lg:scale-[200%]      
     "
   >
-    <div></div>
     <!-- Coding Sprite -->
     <div 
       class="
@@ -98,7 +99,10 @@ watch(isDark, (dark)=> {
         bg-[length:auto_120%] 
       "
       :style="{ backgroundPosition: `${programming.currentFrame.value.x} ${programming.currentFrame.value.y}` }"
-    ></div>
+      @mouseenter="stopCoding(true)"
+      @mouseleave="stopCoding(false)"
+    >
+    </div>
 
     <!-- Cat Sprite-->
     <div 

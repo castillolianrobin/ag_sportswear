@@ -46,43 +46,11 @@ function scrollToElement(id: SectionName)  {
     "
   >
 
-    <div 
-      class="
-        px-4 p-1 2xl:p-3 
-        relative 
-        bg-secondary-300/90 dark:bg-secondary-900/90
-        border-primary-900 dark:border-primary-400 border-2 
-        rounded
-        md:backdrop-blur
-      "
-    >
-
-      <!-- Name -->
-      <h1 
-        class="
-          z-20
-          relative
-          text-xl md:text-3xl 2xl:text-5xl 
-          text-primary-950 dark:text-primary-200
-          drop-shadow-lg shadow-primary-50
-           border-secondary-500
-          transition-colors
-        "
-      >
-        Lian Robin Castillo
-      </h1>
-      
-      <!-- Details -->
-      <div class="w-full flex flex-col md:flex-row md:gap-3">
-        <!-- Title -->
-        <h3 class="ml-0.5 my-1 text-secondary-950 dark:text-secondary-200 2xl:text-xl">
-          Frontend Developer
-        </h3>
-      </div>
-    </div>
+    <BannerCallToActionNameCard></BannerCallToActionNameCard>
     <!-- Controls -->
     <div 
       class="
+        ml-1
         py-2 2xl:py-7 pl-2 
         relative
         flex flex-col items-start justify-stretch gap-1 2xl:gap-5 
@@ -91,12 +59,14 @@ function scrollToElement(id: SectionName)  {
       
       <!-- <AppButton variant="text" color="primary-200" href="#about">About</AppButton> -->
       <BannerCallToActionButton 
+        :is-active="props.activeSection === 'stack'"
         @click="setActiveSection('stack')"
       >
         Tech Stack
       </BannerCallToActionButton>
       
       <BannerCallToActionButton 
+        :is-active="props.activeSection === 'projects'"
         @click="setActiveSection('projects')"
       >
         Projects

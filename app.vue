@@ -15,7 +15,9 @@ const activeSection = ref<SectionName | null>(null)
       <Title>Lian Robin</Title>
     </Head>
     <!-- Header -->
-    <Header></Header>
+    <Header
+      class="opacity-0 animate-fadeIn"
+    ></Header>
     
     <!-- Main Content  -->
     <div class="relative">
@@ -23,11 +25,31 @@ const activeSection = ref<SectionName | null>(null)
       
       <BannerCallToAction
         v-model:active-section="activeSection"
+        class="opacity-0 animate-fadeIn"
       ></BannerCallToAction>
     </div>
 
+    <!-- Intro -->
+    <div 
+      class="
+        z-20 
+        fixed top-0 left-0 
+        w-full h-full
+        flex items-center justify-center
+        bg-primary-200/25 dark:bg-primary-950/25
+        backdrop-blur-xl
+        animate-blurIn
+      "
+    >
+      <BannerCallToActionNameCard 
+        hide-extra
+        class="scale-125"
+      ></BannerCallToActionNameCard>
+    </div>
     <!-- Content -->
-    <Content v-model:active-section="activeSection"></Content>
+    <Content 
+      v-model:active-section="activeSection"
+    ></Content>
     <!-- <main 
       v-if="false"
       class="

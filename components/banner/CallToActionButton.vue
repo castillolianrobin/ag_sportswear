@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { PropType } from 'nuxt/dist/app/compat/capi';
+
+const props = defineProps({
+  isActive: Boolean as PropType<boolean>,
+})
+</script>
+
 <template>
   <button
     class="
@@ -7,11 +15,12 @@
       text-sm 2xl:text-xl font-base
       text-start
       relative
-      group
-      flex items-center gap-3
+      flex items-center
     "
+    :class="{ 'group': !props.isActive }"
     v-bind="{ ...$attrs }"
   >
+    <!-- Backdrop -->
     <div
       class="
         opacity-0 group-hover:opacity-100
@@ -23,6 +32,11 @@
         transition-all
       "
     ></div>
+    <!-- Active Box -->
+    <div
+      class="flex-grow-0 aspect-square bg-primary-200 overflow-hidden transition-all"
+      :class="`${ props.isActive ? 'w-2' : 'w-0 ' }`"
+    ></div>
     <span 
       class=" 
         relative 
@@ -30,6 +44,7 @@
         transition-all
         truncate
       "
+      :class="`${ props.isActive ? 'w-0' : 'w-full'}`"
     >
       <slot></slot>
     </span>

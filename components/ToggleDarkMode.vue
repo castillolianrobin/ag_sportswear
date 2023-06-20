@@ -14,13 +14,12 @@ const props = defineProps({
 
 const isDarkMode = useDark({ ...props?.options, disableTransition: false });
 
+
 </script>
 
 <template>
   <AppFormCheckbox
     v-model="isDarkMode"
-    class="ml-auto"
-    toggle-input
   >
     <template #checkbox="{ isActive, onChangeHandler }">
       <div 

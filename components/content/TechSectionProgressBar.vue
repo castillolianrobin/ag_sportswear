@@ -19,6 +19,7 @@
         font-semibold
         text-primary-900 dark:text-primary-300
         transition-all ease-out duration-500
+        border-r-4 border-primary-900 dark:border-primary-300
       "
       :style="{ minWidth: `${(props.rating || 0)*10}%` }"
     >

@@ -44,6 +44,8 @@ module.exports = {
       animation: {
         'moon': 'pulse 5s linear infinite',
         'grain': 'grain 8s steps(10) infinite',
+        'blurIn': 'blurIn 0.5s ease 2s 1 forwards',
+        'fadeIn': 'fadeIn 0.5s ease 3.5s 1 forwards',
       },
       keyframes: {
         grain: {
@@ -57,6 +59,14 @@ module.exports = {
           '70%':  {  backgroundPosition: '0% 15%' },
           '80%':  {  backgroundPosition: '3% 35%' },
           '90%':  {  backgroundPosition: '-10% 10%' },
+        },
+        blurIn: {
+          '0%':  {  backdropFilter: 'blur(24px)', opacity: 1, },
+          '100%':  { backdropFilter: 'blur(0)', opacity: 0, display: 'none', overflow: 'hidden', maxHeight: 0 },
+        },
+        fadeIn: {
+          '0%':  { opacity: 0, },
+          '100%':  { opacity: 1, },
         }
       }
     },

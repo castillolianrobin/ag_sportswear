@@ -34,8 +34,6 @@ const loading = ref(false);
         <!-- Wall -->
         <BannerInterior></BannerInterior>
         
-        <!-- Programming Sprite -->
-        <BannerProgrammingSprite></BannerProgrammingSprite>
         
         <!-- Foreground Ambiance -->
         <div
@@ -50,6 +48,8 @@ const loading = ref(false);
             transition
           "
         ></div>
+        <!-- Programming Sprite -->
+        <BannerProgrammingSprite></BannerProgrammingSprite>
       </div>
   
       <!-- Loading -->
