@@ -39,7 +39,7 @@ function scrollToElement(id: SectionName)  {
       w-fit
       absolute
       top-3 md:top-5 2xl:top-12
-      left-0 md:left-5   2xl:left-12
+      left-3 md:left-5   2xl:left-12
       md:scale-100 2xl:scale-100 
       flex flex-col items-start
       transition-all

@@ -72,7 +72,7 @@ function isActive(sectionName: SectionName) {
     >
       
       <AppButton 
-        size="sm"
+        size="sm" variant="outline"
         class="py-0"
         @click="emits('update:activeSection', null)"
       >

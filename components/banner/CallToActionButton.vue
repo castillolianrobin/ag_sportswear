@@ -35,7 +35,7 @@ const props = defineProps({
     <!-- Active Box -->
     <div
       class="flex-grow-0 aspect-square bg-primary-200 overflow-hidden transition-all"
-      :class="`${ props.isActive ? 'w-2' : 'w-0 ' }`"
+      :class="`${ props.isActive ? 'w-0 md:w-2' : 'w-0 ' }`"
     ></div>
     <span 
       class=" 
@@ -44,7 +44,7 @@ const props = defineProps({
         transition-all
         truncate
       "
-      :class="`${ props.isActive ? 'w-0' : 'w-full'}`"
+      :class="`${ props.isActive ? 'md:w-0' : 'w-full'}`"
     >
       <slot></slot>
     </span>
