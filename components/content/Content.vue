@@ -73,10 +73,11 @@ function isActive(sectionName: SectionName) {
     >
       <div class="flex items-center">
         <button
-          class="w-5 h-5 bg-primary-200 aspect-square shadow"
+          class="group w-5 h-5 bg-primary-200 aspect-square shadow font-bold overflow-hidden"
           @click="emits('update:activeSection', null)"
         >
-          <span class="font-bold">-</span>
+          <span class="group-hover:-translate-y-full block transition-transform">-</span>
+          <span class="group-hover:-translate-y-full block transition-transform font-light">&#10006;</span>
         </button>
       </div>
       <h3 
