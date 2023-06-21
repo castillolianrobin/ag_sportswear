@@ -67,6 +67,10 @@ module.exports = {
         fadeIn: {
           '0%':  { opacity: 0, },
           '100%':  { opacity: 1, },
+        },
+        progressBarPulse: {
+          '0%, 10%': { transform: 'scale(102%)', filter: 'brightness(125%)' },
+          '90%, 100%': { transform: 'scale(100%)', filter: 'brightness(100%)' }
         }
       }
     },

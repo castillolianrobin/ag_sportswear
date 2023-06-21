@@ -44,8 +44,9 @@ watch(toRef(props, 'activeSection'), (val)=> {
   setTimeout(()=>{showContent.value = true}, 340);
 })
 
-/** Helpers  */
 
+
+/** Helpers  */
 
 function isActive(sectionName: SectionName) {
   return props.activeSection === sectionName;
@@ -70,14 +71,14 @@ function isActive(sectionName: SectionName) {
       class="mb-5 hidden md:flex gap-3"
       :class="showContent ? 'visible' : 'invisible'"
     >
-      
-      <AppButton 
-        size="sm" variant="outline"
-        class="py-0"
-        @click="emits('update:activeSection', null)"
-      >
-        <span class="mx-2 text-sm">&#10006;</span>
-      </AppButton>
+      <div class="flex items-center">
+        <button
+          class="w-5 h-5 bg-primary-200 aspect-square shadow"
+          @click="emits('update:activeSection', null)"
+        >
+          <span class="font-bold">-</span>
+        </button>
+      </div>
       <h3 
         class="
           text-primary-950 dark:text-primary-200

@@ -58,7 +58,7 @@ const SOCIALS = [
           p-1 
           rounded-full 
           hover:brightness-125 
-          bg-primary-300 dark:bg-primary-900 
+          bg-primary-200 dark:bg-primary-900 
           shadow 
           border border-primary-500
           transition-all

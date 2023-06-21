@@ -2,8 +2,11 @@
 import { useDark } from '@vueuse/core';
 
 
-const isDark = useDark({ disableTransition: false });
+// const img = new Image();
+// img.onload= ()=>alert('loaded');
+// img.src = '@/assets/img/sprites/programming-sprite-hd.png';
 
+const isDark = useDark({ disableTransition: false });
 
 /** Programming Logic */
 const lookininWindowSprite = [
@@ -69,14 +72,6 @@ const catAnim = {
 };
 
 const cat = useSpriteAnimation(catAnim.idling, 300); 
-
-function catHovered(hovered: boolean) {
-  if (hovered)
-    cat.runAnimation(isDark.value ? [catAnim.wakingUp[1]] : [catAnim.wakingUp[3]], true);
-  else {
-    cat.runAnimation((isDark.value ? catAnim.sleeping : catAnim.idling), true)
-  }
-}
 
 watch(isDark, (dark)=> {
   if (dark) {
