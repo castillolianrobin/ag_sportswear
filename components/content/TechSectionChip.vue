@@ -23,7 +23,7 @@
           rounded-full h-full 
           flex items-center 
           shadow 
-          border-2 border-secondary-100 dark:border-secondary-500 
+          border-2 border-secondary-300 dark:border-secondary-700 
           bg-primary-900 dark:bg-primary-300
           overflow-hidden
         "

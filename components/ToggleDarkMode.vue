@@ -21,6 +21,7 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
   <AppFormCheckbox
     v-model="isDarkMode"
     :label="isDarkMode ? 'Dark' : 'Light'"
+    label-class="hidden md:block"
   >
     <template #checkbox="{ isActive, onChangeHandler }">
       <div 
