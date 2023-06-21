@@ -45,7 +45,7 @@ module.exports = {
         'moon': 'pulse 5s linear infinite',
         'grain': 'grain 8s steps(10) infinite',
         'blurIn': 'blurIn 0.5s ease 2s 1 forwards',
-        'fadeIn': 'fadeIn 0.5s ease 3.5s 1 forwards',
+        'fadeIn': 'fadeIn 0.5s ease 2.5s 1 forwards',
       },
       keyframes: {
         grain: {

@@ -4,7 +4,7 @@ import { SectionName } from '../content/Content.vue';
 const props = defineProps({
   activeSection: {
     type: String as PropType<SectionName | null>,
-    default: 'stack'
+    default: null,
   },
 })
 
