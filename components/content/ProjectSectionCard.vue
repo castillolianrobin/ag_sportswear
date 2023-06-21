@@ -1,11 +1,11 @@
 <script setup lang="ts">
-
+import { TECHONOLOGIES } from '@/constants/TECHNOLOGIES'
 const props = defineProps({
   img: String,
   title: String,
   description: String,
   link: String,
-  stack: Array as PropType<string[]> 
+  stack: Array as PropType<{ title: string, color: string, accentColor?: string }[]> 
 })
 
 </script>
@@ -49,9 +49,13 @@ const props = defineProps({
       <span 
         v-for="techStack in props.stack"
         :key="`${props.title}-${techStack}`"
-        class="px-3 rounded-full bg-primary-500 text-sm shadow"
+        class="px-3 rounded-full text-sm shadow"
+        :style="{ 
+          backgroundColor: techStack?.color,
+          color: techStack?.accentColor || 'white'  
+        }"
       >
-        {{ techStack }}
+        {{ techStack.title }}
       </span>
     </div>
   </a>

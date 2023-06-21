@@ -10,6 +10,12 @@ export const TECHONOLOGIES =  {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
     color: '#087ea4',
   },
+  TYPESCRIPT: {
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png',
+    title: 'TypeScript',
+    color: '#FFFFFF',
+    accentColor: '#555555'
+  },
 
   // CSS Frameworks
 
@@ -57,7 +63,17 @@ export const TECHONOLOGIES =  {
     title: 'Express',
     img: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png',
     color: '#FFFFFF',
+    accentColor: '#444444'
   },
+
+  // DevOps
+
+  AWS: {
+    title: 'Amazon Web Service',
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png',
+    color: '#232F3E',
+
+  }
 }
 
 
