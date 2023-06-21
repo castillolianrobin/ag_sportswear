@@ -12,7 +12,7 @@ const props = defineProps({
       my-1 md:my-3 px-2
       w-full
       text-primary-200 hover:text-white
-      text-sm 2xl:text-xl font-base
+      text-sm md:text-lg 2xl:text-xl font-base
       text-start
       relative
       flex items-center
