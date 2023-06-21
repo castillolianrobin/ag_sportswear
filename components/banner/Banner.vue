@@ -70,12 +70,13 @@ const loading = ref(false);
     <div 
       class="
         md:hidden
-        -mt-[10vh] 
+        -mt-[12vh] 
         h-[12vh] md:h-[15vh] 
         relative
         bg-gradient-to-b
         from-transparent
-        to-primary-950
+        to-secondary-500 dark:to-secondary-900
+        transition-colors
       "
     ></div>
   </div>
