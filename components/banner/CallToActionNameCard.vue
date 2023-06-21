@@ -14,7 +14,7 @@ const props = defineProps({
     :class="
       ! props.hideExtra ? `
         border-primary-900 dark:border-primary-400 border-2
-        bg-secondary-300/90 dark:bg-secondary-950 md:backdrop-blur
+        bg-secondary-300/90 dark:bg-secondary-950/95 md:backdrop-blur
         bg-[length:100%]
         bg-[url('@/assets/img/pixel-bg-2.jpg')] 
         bg-blend-overlay
