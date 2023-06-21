@@ -11,10 +11,14 @@ const props = defineProps({
       relative 
       rounded
     "
-    :class="{
-      'bg-secondary-300/90 dark:bg-secondary-900/90 md:backdrop-blur': !props.hideExtra,
-      'border-primary-900 dark:border-primary-400 border-2': !props.hideExtra,
-    }"
+    :class="
+      ! props.hideExtra ? `
+        border-primary-900 dark:border-primary-400 border-2
+        bg-secondary-300/90 dark:bg-secondary-950 md:backdrop-blur
+        bg-[length:100%]
+        bg-[url('@/assets/img/pixel-bg-2.jpg')] 
+        bg-blend-overlay
+      ` : ''"
   >
 
     <!-- Name -->
@@ -25,7 +29,7 @@ const props = defineProps({
         text-xl md:text-3xl 2xl:text-5xl 
         text-primary-950 dark:text-primary-200
         drop-shadow-lg shadow-primary-50
-         border-secondary-500
+        border-secondary-500
         transition-colors
       "
     >

@@ -37,9 +37,10 @@ const SOCIALS = [
       overflow-hidden
       text-xs md:text-base 2xl:text-2xl
     "
-    >
+  >
+    <!-- Mobile Navigation -->
     <div 
-      class="flex gap-3 bg-primary-500/80 transition-all rounded"
+      class="flex gap-3 bg-primary-500 transition-all rounded"
       :class="showHeader ?  'max-h-full opacity-100 px-5' : 'max-h-0 opacity-0'"
     >
       <AppButton href="#" variant="text" color="primary-200" class="px-0">Home</AppButton>
@@ -60,7 +61,7 @@ const SOCIALS = [
           hover:brightness-125 
           bg-primary-200 dark:bg-primary-900 
           shadow 
-          border border-primary-500
+          border border-primary-900 dark:border-primary-300 
           transition-all
         "
       >

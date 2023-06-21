@@ -94,21 +94,26 @@ function isActive(sectionName: SectionName) {
     <main 
       class="
         flex-grow flex-shrink 
-        p-5
         h-full
         relative 
-        bg-secondary-100  dark:bg-secondary-950
-        md:bg-opacity-75
         text-secondary-950 dark:text-secondary-100
         md:border-2 border-primary-900 dark:border-primary-400 
         md:rounded
         overflow-auto scrollbar
         transition-all duration-200 
-        backdrop-blur shadow
+        shadow
       "
       :class="`${ showContent ? 'md:scale-100 md:opacity-100 ease-in-out'  : 'md:scale-50 md:opacity-0' }`"
     >
-      <div class="flex flex-col gap-12">
+      <div 
+        class="
+          p-5
+          flex flex-col gap-12
+          bg-secondary-200  dark:bg-secondary-950
+          bg-[length:200%]
+          bg-[url('@/assets/img/pixel-bg-2.jpg')] 
+          bg-blend-overlay
+        ">
         <component
           v-for="(section) in sections"
           :key="section.key"

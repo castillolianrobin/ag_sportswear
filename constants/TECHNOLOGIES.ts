@@ -86,7 +86,7 @@ export const TECH_STACK = [
     ]
   },
   {
-    title: 'css Frameworks',
+    title: 'CSS Frameworks',
     skills: [
         { ...TECHONOLOGIES.BOOTSTRAP, rating: 9 },
         { ...TECHONOLOGIES.TAILWIND, rating: 8 },

@@ -20,20 +20,21 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
 <template>
   <AppFormCheckbox
     v-model="isDarkMode"
+    :label="isDarkMode ? 'Dark' : 'Light'"
   >
     <template #checkbox="{ isActive, onChangeHandler }">
       <div 
         tabindex="0"
         class="
           p-[1px] 
-          mx-1
-          w-11 h-6 
+          w-[1.6rem]  aspect-square 
           border border-primary-900 dark:border-primary-300 
           rounded-full
           focus:outline outline-1 outline-primary-600 dark:outline-primary-300
           bg-white/25
           dark:bg-black/25
           transition
+          overflow-hidden
         "
         @keypress.space="onChangeHandler"
       >
@@ -52,7 +53,6 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
               bg-primary-200 dark:bg-primary-800 
               shadow 
             "
-            :class="isDarkMode ? 'translate-x-full' : 'translate-x-0'"
           >
             <span v-show="isActive">
               &#x263e;
