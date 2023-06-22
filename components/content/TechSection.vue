@@ -9,7 +9,7 @@ const showRating = ref(false);
 </script>
 
 <template>
-  <div id="stack">
+  <section id="stack">
     <ContentSectionTitle>Tech Stack</ContentSectionTitle>
     <div class="mb-10 md:mb-5 flex justify-end">
       <AppFormCheckbox 
@@ -41,7 +41,7 @@ const showRating = ref(false);
           >
             <ContentTechSectionChip
               v-for="skillRating in skill.skills"
-              :key="skillRating.skillName"
+              :key="skillRating.title"
               v-bind="skillRating"
             ></ContentTechSectionChip>
           </div>
@@ -51,7 +51,7 @@ const showRating = ref(false);
           >
             <ContentTechSectionProgressBar
               v-for="skillRating in skill.skills"
-              :key="skillRating.skillName + 'rating'"
+              :key="skillRating.title + 'rating'"
               v-bind="skillRating"
             ></ContentTechSectionProgressBar>
           </div>
@@ -59,5 +59,5 @@ const showRating = ref(false);
       </div>
   
     </div>
-  </div>
+  </section>
 </template>

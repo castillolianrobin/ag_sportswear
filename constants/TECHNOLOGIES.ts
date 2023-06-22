@@ -10,6 +10,11 @@ export const TECHONOLOGIES =  {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
     color: '#087ea4',
   },
+  NUXT: {
+    title: 'Nuxt',
+    img: 'https://nuxt.com/assets/design-kit/logo/icon-green.png',
+    color: '#42b883',
+  },
   TYPESCRIPT: {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png',
     title: 'TypeScript',
@@ -73,7 +78,15 @@ export const TECHONOLOGIES =  {
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png',
     color: '#232F3E',
 
-  }
+  },
+
+  VERCEL: {
+    title: 'Vercel',
+    img: 'https://www.svgrepo.com/show/327408/logo-vercel.svg',
+    color: '#DDDDDD',
+  },
+
+  
 }
 
 

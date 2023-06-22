@@ -71,6 +71,13 @@ function scrollToElement(id: SectionName)  {
       >
         Projects
       </BannerCallToActionButton>
+
+      <BannerCallToActionButton 
+        :is-active="props.activeSection === 'footer'"
+        @click="setActiveSection('footer')"
+      >
+        References
+      </BannerCallToActionButton>
       
     </div>
   </div>

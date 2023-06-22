@@ -29,7 +29,7 @@ html::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track {
   border-radius: 100vh;
   background: rgba(255,255,255,0.8);
 }
-.dark html::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track {
+.dark html::-webkit-scrollbar-track, .dark .scrollbar::-webkit-scrollbar-track {
   background: rgba(50,50,50,0.8);
   
 }

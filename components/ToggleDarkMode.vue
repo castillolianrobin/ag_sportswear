@@ -43,24 +43,27 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
           <div 
             class="
               absolute 
-              transition  
-              h-full 
-              aspect-square 
+              transition duration-300 ease-in-out  
+              h-full w-[200%] 
               rounded-full
-              flex items-center justify-center
-              text-[0.7rem]
+              flex items-center justify-between
+              px-[30%]
               select-none
-              text-primary-800 dark:text-primary-100
+              text-[0.8rem] font-bold
+              text-primary-900 dark:text-primary-100
               bg-primary-200 dark:bg-primary-800 
               shadow 
             "
+            :class="`${ isDarkMode ? '-translate-x-1/2' : '' }`"
           >
-            <span v-show="isActive">
-              &#x263e;
-            </span>
-            <span v-show="!isActive">
+            <!-- Sun -->
+            <p>
               &#9788;
-            </span>
+            </p>
+            <!-- Moon -->
+            <p>
+              &#x263e;
+            </p>
           </div>
         </div>
       </div>

@@ -13,10 +13,10 @@ const props = defineProps({
 <template>
   <a 
     class="
+      group/project-card
       p-2
       cursor-pointer
-      hover:scale-[101%]
-      bg-primary-200 hover:bg-primary-50 dark:bg-primary-950 dark:hover:bg-primary-900
+      bg-primary-200 dark:bg-primary-950
       border-primary-500
       overflow-hidden rounded shadow
       transition-all
@@ -36,7 +36,45 @@ const props = defineProps({
 
       <div>
         <!-- Title -->
-        <h3 class="font-semibold">{{ props.title  }}</h3>
+        <div class="flex items-center gap-3">
+
+          <h3 
+            class="
+              group-hover/project-card:px-2
+              font-semibold 
+              relative 
+              flex 
+              justify-center 
+              w-fit
+              group-hover/project-card:text-white
+              transition-all
+            "
+          >
+            <!-- On hover effect -->
+            <span 
+              class="
+                absolute 
+                h-full w-0 group-hover/project-card:w-full
+                opacity-0 group-hover/project-card:opacity-100
+                bg-primary-500
+                rounded-full
+                transition-all ease-in-out duration-300
+              "
+            ></span>
+            <span class="relative text-center">{{ props.title  }}</span>
+          </h3>
+          <button
+            class="
+              text-xs text-primary-900 font-bold
+              w-0 group-hover/project-card:md:w-fit
+              overflow-hidden
+              whitespace-nowrap
+              transition-all
+            "
+          >
+            Click to Visit
+          </button>
+        </div>
         <!-- Description -->
         <p class="text-secondary-600 dark:text-secondary-400 text-sm">
           {{ props.description || 'No Description'  }}

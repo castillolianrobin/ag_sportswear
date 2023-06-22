@@ -2,8 +2,9 @@
 import { PropType } from 'nuxt/dist/app/compat/capi';
 import TechSection from './TechSection.vue';
 import ProjectSection from './ProjectSection.vue';
+import FooterSection from './FooterSection.vue';
 
-export type SectionName = 'stack' | 'projects' | 'about';
+export type SectionName = 'stack' | 'projects' | 'about' | 'footer';
 
 const props = defineProps({
   activeSection: {
@@ -22,6 +23,7 @@ const emits = defineEmits(['update:activeSection']);
 const sections: { component: any, key: SectionName  }[] = [
   { component: TechSection, key: 'stack' },
   { component: ProjectSection, key: 'projects' },
+  { component: FooterSection, key: 'footer' },
 ];
 
 
@@ -30,6 +32,7 @@ const sectionNameComputed = computed(()=>{
     case 'stack': return 'Tech Stack';
     case 'projects': return 'Projects';
     case 'about': return 'About';
+    case 'footer': return 'References';
     default: return '';
   }
 });
@@ -104,7 +107,11 @@ function isActive(sectionName: SectionName) {
         transition-all duration-200 
         shadow
       "
-      :class="`${ showContent ? 'md:scale-100 md:opacity-100 ease-in-out'  : 'md:scale-50 md:opacity-0' }`"
+      :class="`${ 
+        showContent 
+          ? 'md:scale-100 md:opacity-100 ease-in-out' 
+          : 'md:scale-50 md:opacity-0' 
+      }`"
     >
       <div 
         class="
@@ -123,10 +130,25 @@ function isActive(sectionName: SectionName) {
           class="transition-all"
           :class="`${ isActive(section.key) && showContent 
             ? 'md:opacity-100' 
-            : 'md:opacity-0 md:hidden'
+            : 'md:opacity-0 md:hidden md:sr-only'
           }`"
         ></component>
       </div>
     </main>
+    
+    
+    <!-- Credit -->
+    <p 
+      class="
+        mt-auto 
+        text-center text-sm font-extralight text-secondary-200
+        md:fixed bottom-2 left-9
+        drop-shadow-md
+        bg-primary-600 dark:bg-primary-400 md:bg-transparent
+
+      "
+    >
+      castillolianrobin &#169; 2023
+    </p>
   </div>
 </template>

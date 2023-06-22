@@ -16,6 +16,8 @@ const props = defineProps({
       text-start
       relative
       flex items-center
+      outline-none
+      focus:text-white
     "
     :class="{ 'group': !props.isActive }"
     v-bind="{ ...$attrs }"
@@ -24,7 +26,7 @@ const props = defineProps({
     <div
       class="
         opacity-0 group-hover:opacity-100
-        w-0 group-hover:w-full h-full      
+        h-full w-0 group-hover:w-full group-focus:w-full
         bg-gradient-to-r
         from-primary-500/50 from-70%
         to-transparent
