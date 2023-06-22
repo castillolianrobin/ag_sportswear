@@ -7,7 +7,7 @@ const props = defineProps({
 
 <template>
   <div 
-    class="flex flex-col gap-1 md:gap-5 items-center"
+    class="flex flex-col gap-4 md:gap-5 items-center"
     :class="{
       'md:flex-row-reverse': props.reverse,
       'md:flex-row': !props.reverse,

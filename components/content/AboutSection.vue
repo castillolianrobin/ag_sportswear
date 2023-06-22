@@ -7,7 +7,7 @@
       <a href="#" class="text-primary-700">here</a> to skip this section. If you want to know me on a personal level, you can scan through this section.  
     </p>
 
-    <div class="flex flex-col gap-3 md:gap-14 items-center">
+    <div class="flex flex-col gap-8 md:gap-14 items-center">
       <!-- Dev -->
       <ContentAboutSectionContent>
         <template #icon>
