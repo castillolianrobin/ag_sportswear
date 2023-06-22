@@ -7,20 +7,20 @@ const props = defineProps({
 
 <template>
   <div 
-    class="flex flex-col md:gap-12 lg:gap-20 xl:gap-24 items-center"
+    class="flex flex-col gap-1 md:gap-5 items-center"
     :class="{
       'md:flex-row-reverse': props.reverse,
       'md:flex-row': !props.reverse,
     }"
   >
     <!-- Icon -->
-    <div class="mr-4 first-line:mt-12 px-10 flex-shrink-0">
+    <div class="flex-shrink-0 w-1/4 flex items-center justify-center">
       <slot name="icon"></slot>
     </div>
     <!--  Content -->
-    <div class="flex-grow mx-auto font-light">
+    <div class="flex-grow mx-auto font-light text-sm md:text-base">
       <p 
-        class="text-center"
+        class="text-justify"
         :class="{
           'md:text-end': props.reverse,
           'md:text-start': !props.reverse,

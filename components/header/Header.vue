@@ -9,7 +9,13 @@ const { y } = useWindowScroll();
 const showHeader = computed(()=>(y.value > 100))
 
 const SOCIALS = [
-  {
+{
+    title: 'Resume',
+    img: 'https://icon-library.com/images/resume-icon-png/resume-icon-png-13.jpg',
+    link: 'https://drive.google.com/file/d/1f5z0om5GDZWwjbL-bY7YWYVpmLAoiJeJ/view?usp=sharing',
+    class: ''
+  },  
+{
     title: 'LinkedIn',
     img: 'https://cdn-icons-png.flaticon.com/512/49/49408.png',
     link: 'https://www.linkedin.com/in/lianrobincastillo/',
@@ -40,10 +46,11 @@ const SOCIALS = [
   >
     <!-- Mobile Navigation -->
     <div 
-      class="flex gap-3 bg-primary-500 transition-all rounded"
-      :class="showHeader ?  'max-h-full opacity-100 px-5' : 'max-h-0 opacity-0'"
+      class="flex md:gap-1 bg-primary-500 transition-all rounded"
+      :class="showHeader ?  'max-h-full opacity-100' : 'max-h-0 opacity-0'"
     >
       <AppButton href="#" variant="text" color="primary-200" class="px-0">Home</AppButton>
+      <AppButton href="#about" variant="text" color="primary-200" class="px-0">About</AppButton>
       <AppButton href="#stack" variant="text" color="primary-200" class="px-0">Tech</AppButton>
       <AppButton href="#projects" variant="text" color="primary-200" class="px-0">Projects</AppButton>
     </div>

@@ -46,6 +46,7 @@ module.exports = {
         'grain': 'grain 8s steps(10) infinite',
         'blurIn': 'blurIn 0.5s ease 2s 1 forwards',
         'fadeIn': 'fadeIn 0.5s ease 2.5s 1 forwards',
+        'interactable': 'interactableBlinking 2s ease infinite alternate',
       },
       keyframes: {
         grain: {
@@ -76,7 +77,11 @@ module.exports = {
           '0%': { left: '-20%', opacity: 1, },
           '7%': { left: '120%', opacity: 0.6, },
           '8%, 100%': { left: '-20%', opacity: 0.0, }
-        }
+        },
+        interactableBlinking: {
+          '0%': { filter: 'brightness(100%)' },
+          '100%': { filter: 'brightness(110%)' }
+        },
       }
     },
   },

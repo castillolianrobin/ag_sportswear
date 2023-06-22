@@ -109,11 +109,13 @@ watch(isDark, (dark)=> {
     <div 
       class="
         cursor-pointer
-        hover:brightness-110 dark:brightness-90 dark:hover:brightness-105
         w-[100px] h-[78px] absolute top-[26%] left-[67%]
         bg-no-repeat
         bg-[url('@/assets/img/sprites/cat.png')] 
         bg-[length:auto_100%] 
+        drop-shadow-md
+        dark:brightness-90
+        animate-interactable hover:animate-none
       "
       :style="{ backgroundPosition: `${cat.currentFrame.value.x} ${cat.currentFrame.value.y}` }"
       @click="isDark = !isDark"

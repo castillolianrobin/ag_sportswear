@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'nuxt/dist/app/compat/capi';
+import AboutSection from './AboutSection.vue';
 import TechSection from './TechSection.vue';
 import ProjectSection from './ProjectSection.vue';
 import FooterSection from './FooterSection.vue';
@@ -21,6 +22,7 @@ const emits = defineEmits(['update:activeSection']);
 
 
 const sections: { component: any, key: SectionName  }[] = [
+  { component: AboutSection, key: 'about' },
   { component: TechSection, key: 'stack' },
   { component: ProjectSection, key: 'projects' },
   { component: FooterSection, key: 'footer' },

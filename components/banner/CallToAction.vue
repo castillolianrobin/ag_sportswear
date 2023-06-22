@@ -53,11 +53,18 @@ function scrollToElement(id: SectionName)  {
         ml-1
         py-2 2xl:py-7 pl-2 
         relative
-        hidden md:flex flex-col items-start justify-stretch gap-1 2xl:gap-5 
+        hidden md:flex 
+        flex-col items-start justify-stretch gap-0 2xl:gap-5 
       "
     >
       
-      <!-- <AppButton variant="text" color="primary-200" href="#about">About</AppButton> -->
+      <BannerCallToActionButton 
+        :is-active="props.activeSection === 'about'"
+        @click="setActiveSection('about')"
+      >
+        About
+      </BannerCallToActionButton>
+
       <BannerCallToActionButton 
         :is-active="props.activeSection === 'stack'"
         @click="setActiveSection('stack')"

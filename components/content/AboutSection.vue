@@ -1,69 +1,67 @@
 <template>
-  <ContentSection title="about">
-    <div class="text-sm md:text-lg" id="about">
+  <section id="about" class="my-auto flex flex-col items-center justify-center">
+    <ContentSectionTitle class="w-full">About</ContentSectionTitle>
 
+    <p class="mb-12 hidden text-center text-xs md:text-sm">
+      If you only want to know about my professional background, you can click 
+      <a href="#" class="text-primary-700">here</a> to skip this section. If you want to know me on a personal level, you can scan through this section.  
+    </p>
 
-      <p class="text-center text-xs md:text-sm">
-        If you only want to know about my professional background, you can click 
-        <a href="#" class="text-primary-700">here</a> to skip this section. If you want to know me on a personal level, you can scan through this section.  
-      </p>
-
-      <div class="mt-12 flex flex-col gap-5">
-        <!-- Dev -->
-        <ContentAboutSectionContent>
-          <template #icon>
-            <div class="w-52 bg-primary-500/25  rounded-full aspect-square flex items-center justify-center">
-              <img
-                src="@/assets/img/laptop.png" 
-                alt="Lappy"
-                class="md:Lml-10 w-full scale-90 md:scale-110 dark:brightness-75"
-              />
-            </div>
-          </template>
-
-          <template #text>
-            You can call me <span class="font-semibold text-primary-500">Lian</span>. I am a Software Developer with a knack for solving problems and architecting codebase.
-            I have solid experience in building maintainable, scalable, and reusable user interfaces.
-          </template>
-        </ContentAboutSectionContent>
-
-        <!-- Keyboard -->
-        <ContentAboutSectionContent reverse>
-          <template #icon>
-            <div class="w-52 bg-primary-500/25 rounded-full aspect-square flex items-center justify-center">
-              <img
-                src="@/assets/img/keyboard-2.png" 
-                alt="keybs"
-                class="w-full scale-125 md:scale-150"
-              />
-            </div>
-          </template>
-
-          <template #text>
-            I am also a keyboard enthusiast and currently own 2 keyboards both having a 75% layout and 
-            one of them I have heavily modded  <span class="opacity-50 line-through">with sinister enthusiasm</span>. 
-            I plan to collect more keyboard in the future with my end game being the Keychron Q2 Pro.
-          </template>
-        </ContentAboutSectionContent>
-
-        <!-- Cycling -->
-        <ContentAboutSectionContent>
-          <template #icon>
-            <div class="w-52 bg-primary-500/25  rounded-full aspect-square flex items-center justify-center">
-              <img
-                src="@/assets/img/cycling.png" 
-                alt="Lappy"
-                class="md:Lml-10 w-full scale-125 md:scale-150 dark:brightness-75"
-              />
-            </div>
-          </template>
+    <div class="flex flex-col gap-3 md:gap-14 items-center">
+      <!-- Dev -->
+      <ContentAboutSectionContent>
+        <template #icon>
+          <div class="w-20 bg-primary-500/25 dark:bg-primary-500/80  rounded-full aspect-square flex items-center justify-center">
+            <img
+              src="@/assets/img/laptop.png" 
+              alt="Lappy"
+              class="md:Lml-10 w-full scale-110 dark:brightness-75 dark:hue-rotate-180"
+            />
+          </div>
+        </template>
 
         <template #text>
-           I'm also into cycling and does a few loops within my city whenever I'm free. 
-          </template>
-        </ContentAboutSectionContent>
-      </div>
+          You can call me Lian. 
+          I am a Web Developer based in Makati, Philippines. 
+          I have been developing interactive dashboard UI's since 2020 using modern tools and frameworks such as <span class="text-emerald-500">Vue</span> and <span class="text-sky-500">React</span> 
+          and have worked on projects with complex dashboard features.
+        </template>
+      </ContentAboutSectionContent>
 
+      <!-- Front End Development -->
+      <ContentAboutSectionContent>
+        <template #icon>
+          <div class="w-20 bg-primary-500/25 dark:bg-primary-500/80 rounded-full aspect-square flex items-center justify-center">
+            <img
+              src="@/assets/img/card-ui.png" 
+              alt="keybs"
+              class="w-full scale-95 saturate-50 dark:brightness-75 dark:hue-rotate-90"
+            />
+          </div>
+        </template>
+
+        <template #text>
+          I am currently honing my mastery in frontend development through professional work, while learning new technologies to expand my knowledge in web development.
+        </template>
+      </ContentAboutSectionContent>
+
+      <!-- Cycling -->
+      <ContentAboutSectionContent>
+        <template #icon>
+          <div class="w-20 dark:bg-primary-500/80 bg-primary-500/25 rounded-full aspect-square flex items-center justify-center">
+            <img
+              src="@/assets/img/cycling.png" 
+              alt="Bike"
+              class="w-full scale-125 dark:brightness-90  hue-rotate-180 dark:hue-rotate-[220deg]"
+            />
+          </div>
+        </template>
+
+      <template #text>
+          I'm also into cycling and does a few loops within my city whenever I'm free. 
+        </template>
+      </ContentAboutSectionContent>
     </div>
-  </ContentSection>
+
+  </section>
 </template>

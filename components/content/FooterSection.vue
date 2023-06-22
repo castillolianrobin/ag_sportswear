@@ -35,6 +35,22 @@ const assetReference = [
     link: 'https://rare-gallery.com/907554-pixel-art-window-indoors-cats-lamp-rain-animals-digital-.html',
     linkName: 'Rare Gallery',
   },
+  {
+    title: 'Pixel Laptop',
+    link: 'https://www.vecteezy.com/free-vector/art',
+    linkName: 'Art Vectors by Vecteezy',
+
+  },
+  {
+    title: 'Pixel Card UI',
+    link: 'https://www.freepik.com/free-photos-vectors/table-pixel/10',
+    linkName: 'FreePik',
+  },
+  {
+    title: 'Pixel Cycling',
+    link: 'https://www.freepik.com/free-photos-vectors/table-pixel/10',
+    linkName: 'FreePik',
+  },
 ]
 </script>
 
