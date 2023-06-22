@@ -53,7 +53,7 @@ function scrollToElement(id: SectionName)  {
         ml-1
         py-2 2xl:py-7 pl-2 
         relative
-        flex flex-col items-start justify-stretch gap-1 2xl:gap-5 
+        hidden md:flex flex-col items-start justify-stretch gap-1 2xl:gap-5 
       "
     >
       

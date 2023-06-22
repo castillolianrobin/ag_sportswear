@@ -62,7 +62,7 @@ function isActive(sectionName: SectionName) {
     class="
       md:p-5 
       h-full w-full md:w-1/2 
-      md:fixed top-0 right-0
+      md:fixed top-0 right-7
       flex flex-col
     "
   >
@@ -73,7 +73,7 @@ function isActive(sectionName: SectionName) {
     >
       <div class="flex items-center">
         <button
-          class="group w-5 h-5 bg-primary-200 aspect-square shadow font-bold overflow-hidden"
+          class="group w-5 h-5 bg-primary-200 dark:bg-primary-600 aspect-square shadow font-bold overflow-hidden dark:text-secondary-200"
           @click="emits('update:activeSection', null)"
         >
           <span class="group-hover:-translate-y-full block transition-transform">-</span>
@@ -98,7 +98,7 @@ function isActive(sectionName: SectionName) {
         h-full
         relative 
         text-secondary-950 dark:text-secondary-100
-        md:border-2 border-primary-900 dark:border-primary-400 
+        md:border-4 border-primary-600 dark:border-primary-400 
         md:rounded
         overflow-auto scrollbar
         transition-all duration-200 

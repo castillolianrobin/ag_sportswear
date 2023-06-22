@@ -29,9 +29,9 @@
           class="
             block 
             h-full w-full 
-            bg-primary-500 dark:bg-primary-900
+            bg-primary-500 dark:bg-primary-600
             animate-[progressBarPulse_2s_linear_infinite]
-            border-2 border-primary-700
+            border-2 border-primary-700 dark:border-primary-400
           "
           :style="{ animationDelay: `0.${rating}s` }"
         ></div>
