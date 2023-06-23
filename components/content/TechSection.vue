@@ -18,7 +18,7 @@ const showRating = ref(false);
         label="Show Self Rating"
       ></AppFormCheckbox>    
     </div>
-    <div class="flex flex-col gap-8 overflow-x-hidden">
+    <div class="flex flex-col gap-8 2xl:gap-14 overflow-x-hidden">
       <div 
         v-for="skill in skills" 
         :key="skill.title"

@@ -13,7 +13,7 @@ const props = defineProps({
     "
     :class="
       ! props.hideExtra ? `
-        md:border-4 border-primary-600 dark:border-primary-400 
+        md:border-2 border-primary-600 dark:border-primary-400/50 
         bg-secondary-300/90 dark:bg-secondary-950/95 md:backdrop-blur
         bg-[length:100%]
         bg-[url('@/assets/img/pixel-bg-2.jpg')] 

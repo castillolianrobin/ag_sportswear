@@ -66,6 +66,7 @@ function isActive(sectionName: SectionName) {
   <div 
     class="
       md:p-5 
+      2xl:py-20
       h-full w-full md:w-1/2 
       md:fixed top-0 right-7
       flex flex-col
@@ -103,7 +104,7 @@ function isActive(sectionName: SectionName) {
         h-full
         relative 
         text-secondary-950 dark:text-secondary-100
-        md:border-4 border-primary-600 dark:border-primary-400 
+        md:border lg:border-2  2xl:border-4 border-primary-600 dark:border-primary-400 
         md:rounded
         overflow-auto scrollbar
         transition-all duration-200 
