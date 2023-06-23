@@ -48,7 +48,7 @@ const isDarkMode = useDark({ ...props?.options, disableTransition: false });
               select-none
               text-[0.8rem] font-bold
               text-primary-900 dark:text-primary-100
-              bg-primary-200 dark:bg-primary-800 
+              bg-secondary-100 dark:bg-secondary-800 
               shadow 
             "
             :class="`${ isDarkMode ? '-left-full' : 'left-0' }`"
