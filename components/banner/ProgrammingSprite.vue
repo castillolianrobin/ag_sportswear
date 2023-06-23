@@ -84,8 +84,9 @@ watch(isDark, (dark)=> {
 
 
 /** Cat Dialog */
-const CAT_DIALOG_CLICK_ME = 'Click me to toggle dark mode.'
-setTimeout(()=> cat.speakDialog(CAT_DIALOG_CLICK_ME, 100, 2000), 5000);
+const CAT_DIALOG_CLICK_ME_LIGHT = 'Too bright? Click me to go dark';
+const CAT_DIALOG_CLICK_ME_DARK = 'Can\'t see anything? Click me to go light';
+setTimeout(()=> cat.speakDialog(isDark.value ? CAT_DIALOG_CLICK_ME_DARK : CAT_DIALOG_CLICK_ME_LIGHT, 100, 2000), 5000);
 
 watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode activated`, 100, 2000) );
 </script>
@@ -126,7 +127,7 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
       "
       :style="{ backgroundPosition: `${cat.currentFrame.value.x} ${cat.currentFrame.value.y}` }"
       @click="isDark = !isDark"
-      @mouseenter="!cat.dialogRunning.value && cat.speakDialog(CAT_DIALOG_CLICK_ME, false, false)"
+      @mouseenter="!cat.dialogRunning.value && cat.speakDialog(isDark ? CAT_DIALOG_CLICK_ME_DARK : CAT_DIALOG_CLICK_ME_LIGHT, false, false)"
       @mouseleave="!cat.dialogRunning.value && cat.resetDialog()"
     >
       <!-- Cat Dialog -->
