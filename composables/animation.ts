@@ -68,6 +68,8 @@ function useSpriteDialog(_typeSpeed = 150, _hideDialogTime = 1000) {
   const dialogRunning = ref(false);
   // Current dialog 
   const dialogId = ref<NodeJS.Timer | ''>('');
+  let hideDialogTimeoutId:NodeJS.Timer | '' = ''; 
+  let clearDialogTimeoutId:NodeJS.Timer | '' = ''; 
   // Create dialog function
   function speakDialog(_dialog:string, typeSpeed: number | false = _typeSpeed, hideDialogTime: number | false = _hideDialogTime) {
     resetDialog();
@@ -79,11 +81,14 @@ function useSpriteDialog(_typeSpeed = 150, _hideDialogTime = 1000) {
       : dialogId.value = setInterval(()=>{
         if (dialog.value === _dialog) {
           clearInterval(dialogId.value);
-          hideDialogTime && setTimeout(()=> {
+          if (hideDialogTime) {
+            hideDialogTimeoutId = setTimeout(()=> {
             showDialog.value = false;
             dialogRunning.value = false;
-            setTimeout(()=>{ dialog.value = '';}, 1000 );
-          } , hideDialogTime);
+            clearDialogTimeoutId = setTimeout(()=>{ 
+              dialog.value = '';}, 1000 );
+            } , hideDialogTime);
+          }
         return;
         } 
         const dialogLength = dialog.value.length;
@@ -93,6 +98,8 @@ function useSpriteDialog(_typeSpeed = 150, _hideDialogTime = 1000) {
   }
 
   function resetDialog() {
+    clearTimeout(hideDialogTimeoutId);
+    clearTimeout(clearDialogTimeoutId)
     clearInterval(dialogId.value);
     dialog.value = '';
     showDialog.value = false;
