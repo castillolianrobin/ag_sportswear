@@ -118,9 +118,9 @@ const assetReference = [
           class="grid grid-cols-2 gap-3 text-xs md:text-sm"
         >
           <!-- Asset Title -->
-          <di class="text-end md:text-start">
+          <div class="text-end md:text-start">
             {{ asset.title  }}
-          </di>
+          </div>
           <!-- Asset Link -->
           <a 
             :href="asset.link" 

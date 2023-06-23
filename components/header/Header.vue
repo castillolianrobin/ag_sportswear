@@ -63,27 +63,46 @@ const SOCIALS = [
         :href="social.link"
         target="_blank"
         class="
-          p-1 
-          rounded-full 
+          group
           hover:brightness-125 
-          bg-primary-200 dark:bg-primary-900 
-          shadow 
-          border border-primary-900 dark:border-primary-300 
           transition-all
+          flex items-center
         "
       >
-        <img 
-          :src="social.img" 
-          :alt="social.title"
+        <!-- Social Icon -->
+        <div
           class="
-            w-4
-            aspect-square 
-            grayscale-100
-            dark:invert
-            opacity-90
+            p-1 
+            rounded-full 
+            bg-primary-200 dark:bg-primary-900 
+            shadow 
+            border border-primary-900 dark:border-primary-300 
           "
-          :class="social?.class"
-        />
+        >
+          <img 
+            :src="social.img" 
+            :alt="social.title"
+            class="
+              w-4
+              aspect-square 
+              grayscale-100
+              dark:invert
+              opacity-90
+            "
+            :class="social?.class"
+          />
+        </div>
+        <!-- Social Name -->
+        <!-- <span 
+          class="
+            overflow-hidden 
+            w-0 group-hover:w-fit
+            absolute group-hover:relative -mx-4 group-hover:mx-2 
+            transition-all duration-200 ease-in-out
+          "
+        >
+          {{ social.title }}  
+        </span> -->
       </a>
     </div>
 

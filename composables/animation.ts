@@ -1,6 +1,13 @@
 import { useIntervalFn } from "@vueuse/core";
 
 
+export function useSprite( params: { animation: Parameters<typeof useSpriteAnimation>, dialog?: Parameters<typeof useSpriteDialog> }) {
+  const animation = useSpriteAnimation(...params.animation);
+  const dialog = useSpriteDialog(...(params.dialog || []));
+
+  return { ...animation, ...dialog }
+}
+
 export function useSpriteAnimation(currentAnimation: Frame[], _speed = 200, _infinite = true) {
   
   const infinite = ref(_infinite);
@@ -51,6 +58,58 @@ export function useSpriteAnimation(currentAnimation: Frame[], _speed = 200, _inf
   }
 
 }
+
+
+function useSpriteDialog(_typeSpeed = 150, _hideDialogTime = 1000) {
+  // Dialog Text
+  const dialog = ref('');
+  // Dialog Show
+  const showDialog = ref(false); 
+  const dialogRunning = ref(false);
+  // Current dialog 
+  const dialogId = ref<NodeJS.Timer | ''>('');
+  // Create dialog function
+  function speakDialog(_dialog:string, typeSpeed: number | false = _typeSpeed, hideDialogTime: number | false = _hideDialogTime) {
+    resetDialog();
+    dialog.value = '';
+    showDialog.value = true;
+    dialogRunning.value = !!typeSpeed;
+    !typeSpeed 
+      ? dialog.value = _dialog
+      : dialogId.value = setInterval(()=>{
+        if (dialog.value === _dialog) {
+          clearInterval(dialogId.value);
+          hideDialogTime && setTimeout(()=> {
+            showDialog.value = false;
+            dialogRunning.value = false;
+            setTimeout(()=>{ dialog.value = '';}, 1000 );
+          } , hideDialogTime);
+        return;
+        } 
+        const dialogLength = dialog.value.length;
+        const currentChar = _dialog.substring(dialogLength, dialogLength + 1);
+        dialog.value = dialog.value + currentChar;
+      }, typeSpeed); 
+  }
+
+  function resetDialog() {
+    clearInterval(dialogId.value);
+    dialog.value = '';
+    showDialog.value = false;
+  }
+
+  return {
+    dialog,
+    showDialog,
+    dialogRunning,
+    speakDialog,
+    resetDialog,
+  }
+}
+
+
+
+/** __TYPE DEFINITION__  */
 
 export type Frame = {
   x: number | string;

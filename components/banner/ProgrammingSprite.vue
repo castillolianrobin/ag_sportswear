@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useDark } from '@vueuse/core';
+import { useSprite } from '~/composables/animation';
 
 
 // const img = new Image();
@@ -71,7 +72,7 @@ const catAnim = {
   ]
 };
 
-const cat = useSpriteAnimation(catAnim.idling, 300); 
+const cat = useSprite({ animation: [catAnim.idling, 300] }); 
 
 watch(isDark, (dark)=> {
   if (dark) {
@@ -81,6 +82,12 @@ watch(isDark, (dark)=> {
   }
 }, { immediate: true })
 
+
+/** Cat Dialog */
+const CAT_DIALOG_CLICK_ME = 'Click me to toggle dark mode.'
+setTimeout(()=> cat.speakDialog(CAT_DIALOG_CLICK_ME, 100, 2000), 5000);
+
+watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode activated`, 100, 2000) );
 </script>
 
 <template>
@@ -119,7 +126,25 @@ watch(isDark, (dark)=> {
       "
       :style="{ backgroundPosition: `${cat.currentFrame.value.x} ${cat.currentFrame.value.y}` }"
       @click="isDark = !isDark"
-    ></div>
+      @mouseenter="!cat.dialogRunning.value && cat.speakDialog(CAT_DIALOG_CLICK_ME, false, false)"
+      @mouseleave="!cat.dialogRunning.value && cat.resetDialog()"
+    >
+      <!-- Cat Dialog -->
+      <span
+        class="
+          px-1
+          absolute bottom-10
+          bg-primary-900/25 dark:bg-primary-500/25 
+          text-[10px] 2xl:text-sm
+          text-primary-200 
+          text-center
+          transition-all
+        "
+        :class="cat.showDialog.value ? 'opacity-100' : 'opacity-0'"
+      >
+        {{ cat.dialog.value }}
+      </span>
+    </div>
 
   </div>
 </template>
