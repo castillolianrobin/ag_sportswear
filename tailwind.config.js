@@ -38,7 +38,7 @@ module.exports = {
         ],
       },
       fontFamily: {
-        'sans': ['Chakra Petch'],
+        'sans': ['Chakra Petch', 'Pixel', 'sans-serif'],
         'serif': ['Pixel']
       },
       animation: {
