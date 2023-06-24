@@ -135,7 +135,8 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
         class="
           px-1
           absolute bottom-9 -left-5
-          text-[10px] 2xl:text-sm
+          bg-primary-900/25 dark:bg-primary-500/25 md:bg-transparent dark:md:bg-transparent 
+          md:text-[10px] 2xl:text-xs
           text-primary-200 
           text-center
           transition-all
