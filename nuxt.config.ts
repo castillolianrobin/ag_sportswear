@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     // '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    "@nuxtjs/google-fonts",
+    '@nuxtjs/google-fonts',
+    '@nuxt/image',
   ],
 
   // Fonts

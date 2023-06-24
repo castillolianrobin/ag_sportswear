@@ -3,31 +3,12 @@
 
 /** Window Scroll compsoable */
 const { y } = useWindowScroll();
-
+import { SOCIALS } from '@/constants/SOCIALS';
 /** Internal Logic */
 
 const showHeader = computed(()=>(y.value > 100))
 
-const SOCIALS = [
-{
-    title: 'Resume',
-    img: 'https://icon-library.com/images/resume-icon-png/resume-icon-png-13.jpg',
-    link: 'https://drive.google.com/file/d/1f5z0om5GDZWwjbL-bY7YWYVpmLAoiJeJ/view?usp=sharing',
-    class: ''
-  },  
-{
-    title: 'LinkedIn',
-    img: 'https://cdn-icons-png.flaticon.com/512/49/49408.png',
-    link: 'https://www.linkedin.com/in/lianrobincastillo/',
-    class: ''
-  },
-  {
-    title: 'GitHub',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png',
-    link: 'https://github.com/castillolianrobin',
-    class: 'brightness-0'
-  },
-];
+
 
 
 </script>
@@ -79,7 +60,7 @@ const SOCIALS = [
             border border-primary-900 dark:border-primary-300 
           "
         >
-          <img 
+          <NuxtImg
             :src="social.img" 
             :alt="social.title"
             class="

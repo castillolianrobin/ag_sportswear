@@ -1,11 +1,12 @@
 <script setup lang="ts">
-  const props = defineProps({
-    title: String,
-    rating: Number,
-    img: String,
-    color: String,  
-    accentColor: String,  
-  })
+
+const props = defineProps({
+  title: String,
+  rating: Number,
+  img: String,
+  color: String,  
+  accentColor: String,  
+})
 </script>
 
 <template>
@@ -61,7 +62,7 @@
           :style="{ backgroundColor: `${props.color || '#555555EE' }AA` }"
         ></div>
         <!-- Icon -->
-        <img 
+        <NuxtImg
           :src="props.img" 
           class="p-1 h-full aspect-square drop-shadow-md brightness-110"
           :alt="props.title"

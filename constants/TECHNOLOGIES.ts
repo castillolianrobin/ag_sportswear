@@ -2,21 +2,21 @@ export const TECHONOLOGIES =  {
   // Front End Frameworks
   VUE: {
     title: 'Vue',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png',
+    img: '/technologies/vue.png',
     color: '#42b883',
   },
   REACT: {
     title: 'React',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
+    img: "/technologies/react.png",
     color: '#087ea4',
   },
   NUXT: {
     title: 'Nuxt',
-    img: 'https://nuxt.com/assets/design-kit/logo/icon-green.png',
+    img: "/technologies/nuxt.png",
     color: '#42b883',
   },
   TYPESCRIPT: {
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png',
+    img: "/technologies/typescript.png",
     title: 'TypeScript',
     color: '#FFFFFF',
     accentColor: '#555555'
@@ -26,17 +26,17 @@ export const TECHONOLOGIES =  {
 
   BOOTSTRAP: {
     title: 'Bootstrap',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png',
+    img: "/technologies/bootstrap.png",
     color: '#712cf9',
   },
   TAILWIND: {
     title: 'Tailwind',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png',
+    img: "/technologies/tailwind.png",
     color: '#0ea5e9',
   },
   MATERIAL_DESIGN: {
     title: 'Material Design',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Material_Design_Logo.svg/640px-Google_Material_Design_Logo.svg.png',
+    img: "/technologies/material-design.png",
     color: '#C2E7F4',
     accentColor: '#555555',
   },
@@ -44,29 +44,29 @@ export const TECHONOLOGIES =  {
   // Testing Frameworks
   JEST: {
     title: 'Jest',
-    img: 'https://user-images.githubusercontent.com/10525473/50372432-95dcd880-0611-11e9-9432-58de9be26b3b.png',
+    img: "/technologies/jest.png",
     color: '#15c213',
   },
   VITEST: {
     title: 'Vitest',
-    img: 'https://vitest.dev/logo-shadow.svg',
+    img: "/technologies/vitest.svg",
     color: '#6da13f',
   },
   CYPRESS: {
     title: 'Cypress',
-    img: 'https://paganresearch.io/images/cypressio.png',
+    img: "/technologies/cypress.png",
     color: '#007780',
   },
 
   // Backend Frameworks
   LARAVEL: {
     title: 'Laravel',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png',
+    img: "/technologies/laravel.png",
     color: '#111111',
   },
   EXPRESS: {
     title: 'Express',
-    img: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png',
+    img: "/technologies/express.png",
     color: '#FFFFFF',
     accentColor: '#444444'
   },
@@ -75,14 +75,14 @@ export const TECHONOLOGIES =  {
 
   AWS: {
     title: 'Amazon Web Service',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png',
+    img: "/technologies/aws.png",
     color: '#232F3E',
 
   },
 
   VERCEL: {
     title: 'Vercel',
-    img: 'https://www.svgrepo.com/show/327408/logo-vercel.svg',
+    img: "/technologies/vercel.svg",
     color: '#DDDDDD',
   },
 
