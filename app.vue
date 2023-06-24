@@ -28,7 +28,7 @@ const activeSection = ref<SectionName | null>(null)
     
     <!-- Main Content  -->
     <div class="relative">
-      <LazyBanner></LazyBanner>
+      <Banner></Banner>
       
       <BannerCallToAction
         v-model:active-section="activeSection"

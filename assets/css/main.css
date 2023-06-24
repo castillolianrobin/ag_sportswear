@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 
-@font-face {
-  font-family: Pixel;
-  src: url(../fonts/PixelGameFont.ttf);
-}
-
-
 html, body, #app {
   height: 100%;
   scroll-behavior: smooth;
