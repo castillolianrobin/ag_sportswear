@@ -134,12 +134,12 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
       <span
         class="
           px-1
-          absolute bottom-10
-          bg-primary-900/25 dark:bg-primary-500/25 
+          absolute bottom-9 -left-5
           text-[10px] 2xl:text-sm
           text-primary-200 
           text-center
           transition-all
+          drop-shadow-md
         "
         :class="cat.showDialog.value ? 'opacity-100' : 'opacity-0'"
       >
