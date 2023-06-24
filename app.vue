@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { SectionName } from './components/content/Content.vue';
 
+const config = useRuntimeConfig()
+
 /** SEO */
 useSeoMeta({
   title: 'Lian Robin',
   ogTitle: "Lian Robin Castillo's Portofolio",
   description: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
   ogDescription: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
-  ogImage:   __buildAssetsURL() + 'logo.png',
+  ogImage:   config.app.baseURL + __buildAssetsURL() + 'og.png',
   twitterCard: 'summary_large_image',
 })
 
