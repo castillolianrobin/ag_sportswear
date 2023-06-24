@@ -27,7 +27,7 @@ const props = defineProps({
     <div class="flex gap-3">
       <!-- Image -->
       <div class="w-1/4 flex-shrink-0">
-        <img 
+        <NuxtImg 
           :src="props.img" 
           :alt="props.title"
           class="aspect-square object-cover" 
