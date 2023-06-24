@@ -3,7 +3,7 @@ import { SectionName } from './components/content/Content.vue';
 
 
 /** SEO */
-useServerSeoMeta({
+useSeoMeta({
   title: 'Lian Robin',
   ogTitle: "Lian Robin Castillo's Portofolio",
   description: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
@@ -21,9 +21,6 @@ const activeSection = ref<SectionName | null>(null)
     id="app" 
     class="bg-primary-300 dark:bg-primary-950"
   >
-    <useServerSeoMeta>
-      <Meta name="image" content="https://www.castillolianrobin.vercel.app/og.png"></Meta>
-    </useServerSeoMeta>
     <!-- Header -->
     <Header
       class="opacity-0 animate-fadeIn"
