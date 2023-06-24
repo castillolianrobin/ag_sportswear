@@ -9,7 +9,7 @@ useSeoMeta({
   ogTitle: "Lian Robin Castillo's Portofolio",
   description: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
   ogDescription: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
-  ogImage:   config.app.baseURL + __buildAssetsURL() + 'og.png',
+  ogImage:   'https://www.castillolianrobin.vercel.app' + __buildAssetsURL() + 'og.png',
   twitterCard: 'summary_large_image',
 })
 
