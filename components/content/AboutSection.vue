@@ -15,8 +15,8 @@
 
         <template #text>
           You can call me Lian. 
-          I am a Web Developer based in Makati, Philippines. 
-          I have been developing interactive dashboard UI's since 2020 using modern tools and frameworks such as <span class="text-emerald-500">Vue</span> and <span class="text-sky-500">React</span> 
+          I am a web developer based in Makati, Philippines. 
+          I have been developing interactive UI's since 2020 using modern tools and frameworks such as <span class="text-emerald-500">Vue</span> and <span class="text-sky-500">React</span> 
           and have worked on projects with complex dashboard features.
         </template>
       </ContentAboutSectionContent>

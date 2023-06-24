@@ -40,7 +40,7 @@ const props = defineProps({
     <div class="w-full flex flex-col md:flex-row md:gap-3">
       <!-- Title -->
       <h3 class="ml-0.5 my-1 text-secondary-950 dark:text-secondary-400 text-sm 2xl:text-xl">
-        Frontend Developer
+        Web Developer
       </h3>
     </div>
   </div>

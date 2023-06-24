@@ -120,6 +120,14 @@ export const TECH_STACK = [
     skills: [
         { ...TECHONOLOGIES.LARAVEL, rating: 3 },
         { ...TECHONOLOGIES.EXPRESS, rating: 1 },
-    ]
+    ],
+  },
+
+  {
+    title: 'DevOps',
+    skills: [
+        { ...TECHONOLOGIES.AWS, rating: 5 },
+        // { ...TECHONOLOGIES.EXPRESS, rating: 1 },
+    ],
   },
 ]

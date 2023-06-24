@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { SectionName } from './components/content/Content.vue';
+import logoImg from './assets/img/logo.png';
+/** SEO */
+useSeoMeta({
+  title: 'Lian Robin',
+  ogTitle: "Lian Robin Castillo's Portofolio",
+  description: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
+  ogDescription: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
+  ogImage: logoImg,
+  twitterCard: 'summary_large_image',
+})
+
+
 
 
 const activeSection = ref<SectionName | null>(null)
@@ -10,10 +22,6 @@ const activeSection = ref<SectionName | null>(null)
     id="app" 
     class="bg-primary-300 dark:bg-primary-950"
   >
-    <!-- Html Head -->
-    <Head>
-      <Title>Lian Robin</Title>
-    </Head>
     <!-- Header -->
     <Header
       class="opacity-0 animate-fadeIn"
