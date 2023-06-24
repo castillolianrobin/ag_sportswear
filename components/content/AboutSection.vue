@@ -9,7 +9,7 @@
             <img
               src="@/assets/img/laptop.png" 
               alt="Lappy"
-              class="md:Lml-10 w-full scale-110 dark:brightness-75 dark:hue-rotate-180"
+              class="md:ml-10 w-full scale-110 dark:brightness-75 dark:hue-rotate-180"
             />
         </template>
 

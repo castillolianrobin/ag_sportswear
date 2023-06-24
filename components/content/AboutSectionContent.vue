@@ -14,7 +14,7 @@ const props = defineProps({
     }"
   >
     <!-- Icon -->
-    <div class="flex-shrink-0 w-1/4 flex items-center justify-center">
+    <div class="flex-shrink-0 md:w-1/4 flex items-center justify-center">
       <div class="w-20 2xl:w-32 bg-primary-500/25 dark:bg-primary-500/80  rounded-full aspect-square flex items-center justify-center">
         <slot name="icon"></slot>
       </div>

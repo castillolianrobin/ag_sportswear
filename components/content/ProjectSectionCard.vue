@@ -30,6 +30,8 @@ const props = defineProps({
         <NuxtImg 
           :src="props.img" 
           :alt="props.title"
+          width="200px"
+          height="200px"
           class="aspect-square object-cover" 
         />
       </div>

@@ -49,8 +49,10 @@
           
         </div>
         <!-- Icon -->
-        <img 
+        <NuxtImg 
           :src="props.img" 
+          height="24px"
+          width="24px"
           class="p-1 h-6 aspect-square drop-shadow-md brightness-110"
           :alt="props.title"
         />

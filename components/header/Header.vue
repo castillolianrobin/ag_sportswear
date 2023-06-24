@@ -63,8 +63,9 @@ const showHeader = computed(()=>(y.value > 100))
           <NuxtImg
             :src="social.img" 
             :alt="social.title"
+            width="16px"
+            height="16px"
             class="
-              w-4
               aspect-square 
               grayscale-100
               dark:invert
