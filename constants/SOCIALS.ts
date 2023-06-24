@@ -1,7 +1,7 @@
 export const SOCIALS = [
 {
     title: 'Resume',
-    img: "/socials/cv.jpg",
+    img: "/socials/cv.png",
     link: 'https://drive.google.com/file/d/1f5z0om5GDZWwjbL-bY7YWYVpmLAoiJeJ/view?usp=sharing',
     class: ''
   },  
