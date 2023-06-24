@@ -6,8 +6,8 @@ import { SectionName } from './components/content/Content.vue';
 useSeoMeta({
   title: 'Lian Robin',
   ogTitle: "Lian Robin Castillo's Portofolio",
-  description: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
-  ogDescription: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
+  description: 'Lian Robin Castillo is a web developer who have been develops interactive UI using modern frontend tools.',
+  ogDescription: 'Lian Robin Castillo is a web developer who have been develops interactive UI using modern frontend tools.',
   ogImage: 'https://www.castillolianrobin.vercel.app/og.png',
   twitterImage: 'https://www.castillolianrobin.vercel.app/og.png',
   twitterCard: 'summary_large_image',
