@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { SectionName } from './components/content/Content.vue';
 
-const config = useRuntimeConfig()
 
 /** SEO */
 useSeoMeta({
@@ -9,7 +8,7 @@ useSeoMeta({
   ogTitle: "Lian Robin Castillo's Portofolio",
   description: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
   ogDescription: 'Lian Robin Castillo is a web developer who have been developing itneractive UI.',
-  ogImage:   'https://www.castillolianrobin.vercel.app' + __buildAssetsURL() + 'og.png',
+  ogImage:   'https://www.castillolianrobin.vercel.app/og.png',
   twitterCard: 'summary_large_image',
 })
 
