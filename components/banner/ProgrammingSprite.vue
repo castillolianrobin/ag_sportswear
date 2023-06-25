@@ -34,7 +34,7 @@ const continousCoding = [
 
   // ...lookininWindowSprite,
   // ...lookininWindowSprite,
-];
+].reverse();
 const programming = useSpriteAnimation(continousCoding);
 
 
@@ -108,8 +108,6 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
         bg-[length:auto_120%] 
       "
       :style="{ backgroundPosition: `${programming.currentFrame.value.x} ${programming.currentFrame.value.y}` }"
-      @mouseenter="stopCoding(true)"
-      @mouseleave="stopCoding(false)"
     >
     </div>
 
