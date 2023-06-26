@@ -1,9 +1,9 @@
 <script setup lang="ts">
 // import { useWindowScroll } from '@vueuse/core';
+import { SOCIALS } from '@/constants/SOCIALS';
 
 /** Window Scroll compsoable */
 const { y } = useWindowScroll();
-import { SOCIALS } from '@/constants/SOCIALS';
 /** Internal Logic */
 
 const showHeader = computed(()=>(y.value > 100))
@@ -17,17 +17,21 @@ const showHeader = computed(()=>(y.value > 100))
   <header 
     class="
       z-20 
-      fixed top-0 right-2
+      px-2 py-1 md:py-0
+      fixed top-0 right-0
       drop-shadow-lg 
       text-white 
       flex justify-end gap-3
       overflow-hidden
       text-xs md:text-base 2xl:text-2xl
+      w-full md:w-fit
+      transition-colors
     "
+    :class="showHeader ? 'bg-primary-500' : ''"
   >
     <!-- Mobile Navigation -->
     <div 
-      class="flex md:gap-1 bg-primary-500 transition-all rounded"
+      class="flex justify-evenly gap-1 transition-all rounded-b flex-grow"
       :class="showHeader ?  'max-h-full opacity-100' : 'max-h-0 opacity-0'"
     >
       <AppButton href="#" variant="text" color="primary-200" class="px-0">Home</AppButton>
@@ -37,7 +41,7 @@ const showHeader = computed(()=>(y.value > 100))
     </div>
 
     <!-- Socials -->
-    <div class="md:ml-auto flex items-center gap-3">
+    <div class="md:ml-auto hidden md:flex items-center gap-3">
       <a
         v-for="social in SOCIALS"
         :key="social.link" 

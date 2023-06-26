@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { TECHONOLOGIES } from '~/constants/TECHNOLOGIES';
+import { SOCIALS } from '@/constants/SOCIALS';
 
 
 const tools = [
@@ -59,8 +60,9 @@ const assetReference = [
     id="footer" 
     class="
       -m-5
-      pb-5  
-      md:absolute 
+      mt-20 md:-mt-5
+      pb-5
+      relative md:absolute 
       h-full md:w-full
       bg-primary-600 dark:bg-primary-400
       text-secondary-100 dark:text-secondary-950
@@ -70,10 +72,53 @@ const assetReference = [
   >
 
     <!-- Contact Me -->
-    <div class="hidden"> 
-      Do you need my expertise?
+    <div class="md:sr-only pt-[70px] -mt-[130px] mb-10">
+      <div 
+        class="
+          p-3 px-10 w-fit
+          mx-auto
+          flex flex-col gap-3 items-center 
+          bg-primary-950 dark:bg-primary-200
+          border-2 border-primary-200 dark:border-primary-950
+          shadow 
+        "
+      >
+        <span>Do you need my expertise?</span>
+
+        <div class="md:ml-auto flex items-center gap-3">
+          <a
+            v-for="social in SOCIALS"
+            :key="social.link" 
+            :href="social.link"
+            target="_blank"
+            class="
+              group
+              hover:brightness-125 
+              transition-all
+              flex items-center justify-center
+            "
+          >
+            <!-- Social Icon -->
+            <div class="p-1 rounded-full shadow">
+              <NuxtImg
+                :src="social.img" 
+                :alt="social.title"
+                width="25px"
+                height="25px"
+                class="
+                  aspect-square 
+                  grayscale-100
+                  invert dark:invert-0
+                "
+                :class="social?.class"
+              />
+            </div>
+          </a>
+        </div>
+
+      </div>
     </div>
-    
+
     <!-- Made With -->
     <div>
       <h5 class="text-lg font-semibold text-center md:text-start">Made with:</h5>
