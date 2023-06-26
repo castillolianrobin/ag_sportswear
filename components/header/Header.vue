@@ -47,7 +47,7 @@ const showHeader = computed(()=>(y.value > 100))
           group
           hover:brightness-125 
           transition-all
-          flex items-center
+          flex items-center justify-center
         "
       >
         <!-- Social Icon -->
@@ -75,16 +75,18 @@ const showHeader = computed(()=>(y.value > 100))
           />
         </div>
         <!-- Social Name -->
-        <!-- <span 
+        <span 
           class="
+            absolute top-full
+            -translate-y-1/2 group-hover:translate-y-0 
+            w-fit h-0 group-hover:h-full 
             overflow-hidden 
-            w-0 group-hover:w-fit
-            absolute group-hover:relative -mx-4 group-hover:mx-2 
+            text-sm
             transition-all duration-200 ease-in-out
           "
         >
           {{ social.title }}  
-        </span> -->
+        </span>
       </a>
     </div>
 

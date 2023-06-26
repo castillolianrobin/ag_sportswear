@@ -1,11 +1,17 @@
 export const SOCIALS = [
-{
+  {
     title: 'Resume',
     img: "/socials/cv.png",
     link: 'https://drive.google.com/file/d/1f5z0om5GDZWwjbL-bY7YWYVpmLAoiJeJ/view?usp=sharing',
     class: ''
   },  
-{
+  {
+      title: 'Email',
+      img: "/socials/email.png",
+      link: 'mailto:test@mail.com',
+      class: ''
+  },
+  {
     title: 'LinkedIn',
     img: "/socials/linkedIn.png",
     link: 'https://www.linkedin.com/in/lianrobincastillo/',
