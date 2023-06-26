@@ -1,19 +1,20 @@
 <script setup lang="ts">
-import { SectionName } from './components/content/Content.vue';
+import type { SectionName } from './components/content/Content.vue';
 
 
 /** SEO */
 useSeoMeta({
   title: 'Lian Robin',
-  ogTitle: "Lian Robin Castillo's Portofolio",
+  ogTitle: "Lian Robin Castillo's Portfolio",
   description: 'Lian Robin Castillo is a web developer who have been develops interactive UI using modern frontend tools.',
   ogDescription: 'Lian Robin Castillo is a web developer who have been develops interactive UI using modern frontend tools.',
   ogImage: 'https://www.castillolianrobin.vercel.app/og.png',
   twitterImage: 'https://www.castillolianrobin.vercel.app/og.png',
   twitterCard: 'summary_large_image',
-})
+});
 
 const activeSection = ref<SectionName | null>(null)
+
 </script>
 
 <template>
