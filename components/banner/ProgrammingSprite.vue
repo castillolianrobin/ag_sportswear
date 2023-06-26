@@ -114,7 +114,7 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
     <!-- Cat Sprite-->
     <div 
       class="
-        cursor-pointer
+        cursor-pointer select-none
         w-[100px] h-[78px] absolute top-[26%] left-[67%]
         bg-no-repeat
         bg-[url('@/assets/img/sprites/cat.png')] 
@@ -131,6 +131,7 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
       <!-- Cat Dialog -->
       <span
         class="
+          select-none
           px-1
           absolute bottom-9 -left-5
           bg-primary-900/25 dark:bg-primary-500/25 md:bg-transparent dark:md:bg-transparent 

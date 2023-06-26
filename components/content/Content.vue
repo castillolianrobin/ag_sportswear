@@ -147,8 +147,6 @@ function isActive(sectionName: SectionName) {
         text-center text-sm font-extralight text-secondary-200
         md:fixed bottom-2 left-9
         drop-shadow-md
-        bg-primary-600 dark:bg-primary-400 md:bg-transparent
-
       "
     >
       castillolianrobin &#169; 2023
