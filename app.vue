@@ -11,6 +11,7 @@ useSeoMeta({
   ogImage: 'https://www.castillolianrobin.vercel.app/og.png',
   twitterImage: 'https://www.castillolianrobin.vercel.app/og.png',
   twitterCard: 'summary_large_image',
+  ogUrl: 'https://www.castillolianrobin.vercel.app',
 });
 
 const activeSection = ref<SectionName | null>(null)
