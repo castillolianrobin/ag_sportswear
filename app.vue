@@ -6,6 +6,7 @@ import type { SectionName } from './components/content/Content.vue';
 useSeoMeta({
   title: 'Lian Robin',
   ogTitle: "Lian Robin Castillo's Portfolio",
+  ogType: 'website',
   description: 'Lian Robin Castillo is a web developer who have been develops interactive UI using modern frontend tools.',
   ogDescription: 'Lian Robin Castillo is a web developer who have been develops interactive UI using modern frontend tools.',
   ogImage: 'https://www.castillolianrobin.vercel.app/og.png',

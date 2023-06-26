@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/image',
   ],
+  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
 
   // Fonts
   googleFonts: {
