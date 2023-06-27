@@ -62,7 +62,7 @@ const props = defineProps({
           :style="{ backgroundColor: `${props.color || '#555555EE' }AA` }"
         ></div>
         <!-- Icon -->
-        <div class="h-full">
+        <div class="h-full flex-shrink-0">
           <NuxtImg
             :src="props.img"
             height="30px"
