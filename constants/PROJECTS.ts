@@ -39,7 +39,7 @@ export const PROJECTS = [
   },
 
   {
-    title: 'Sample Pokedex',
+    title: 'Simple Pokedex',
     description: 'Basic UI Implementation for 3rd party API courtesy of https://pokeapi.co.',
     img: '/projects/pokedex-sample.png',
     link: 'https://sample-pokedex.netlify.app/',
