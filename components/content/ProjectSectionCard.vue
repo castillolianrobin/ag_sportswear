@@ -3,9 +3,10 @@ import { TECHONOLOGIES } from '@/constants/TECHNOLOGIES'
 const props = defineProps({
   img: String,
   title: String,
+  ownership: String, 
   description: String,
   link: String,
-  stack: Array as PropType<{ title: string, color: string, accentColor?: string }[]> 
+  stack: Array as PropType<{ title: string, color: string, accentColor?: string }[]>
 })
 
 </script>
@@ -67,7 +68,7 @@ const props = defineProps({
           </h3>
           <button
             class="
-              text-xs text-primary-900 font-bold
+              text-xs text-primary-900 dark:text-primary-200 font-bold
               w-0 group-hover/project-card:md:w-fit
               overflow-hidden
               whitespace-nowrap
@@ -77,6 +78,9 @@ const props = defineProps({
             Click to Visit
           </button>
         </div>
+        <p class="my-1 text-xs text-primary-900 dark:text-primary-200"> 
+         {{  props.ownership || 'Uncategorized Ownership' }}
+        </p>
         <!-- Description -->
         <p class="text-secondary-600 dark:text-secondary-400 text-sm">
           {{ props.description || 'No Description'  }}
