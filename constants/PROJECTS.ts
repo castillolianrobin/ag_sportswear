@@ -41,18 +41,6 @@ export const PROJECTS = [
     ]
   },
   {
-    title: 'Express Boilerplate',
-    description: 'Basic boilerplate for bootstraping Express applications for standard REST API with PassportJS authentication',
-    img: '/projects/express-boilerplate.png',
-    ownership: 'Personal Project',
-    link: 'https://github.com/castillolianrobin/api-boilerplate',
-    stack: [
-      TECHONOLOGIES.EXPRESS, 
-      TECHONOLOGIES.TYPESCRIPT,
-      TECHONOLOGIES.AWS,
-    ]
-  },
-  {
     title: 'Pocketyard Dashboard',
     description: 'Construction E-commerce/E-bidding provider based on US. Web dashboard was implemented using Vue 2',
     img: '/projects/pocketyard.png',
@@ -62,6 +50,30 @@ export const PROJECTS = [
       TECHONOLOGIES.VUE, 
       TECHONOLOGIES.BOOTSTRAP,
       TECHONOLOGIES.AWS, 
+    ]
+  },
+  {
+    title: 'Inspire H4H Microsite',
+    description: 'Interactive micro website for an online event during pandemic quarantine',
+    img: '/projects/h4h.png',
+    ownership: 'Employment Project',
+    link: 'https://www.inspireh4h.com/#/login',
+    stack: [
+      TECHONOLOGIES.VUE, 
+      TECHONOLOGIES.MATERIAL_DESIGN,
+      TECHONOLOGIES.AWS,
+    ]
+  },
+  {
+    title: 'Express Boilerplate',
+    description: 'Basic boilerplate for bootstraping Express applications for standard REST API with PassportJS authentication',
+    img: '/projects/express-boilerplate.png',
+    ownership: 'Personal Project',
+    link: 'https://github.com/castillolianrobin/api-boilerplate',
+    stack: [
+      TECHONOLOGIES.EXPRESS, 
+      TECHONOLOGIES.TYPESCRIPT,
+      TECHONOLOGIES.AWS,
     ]
   },
 ]
