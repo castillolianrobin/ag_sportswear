@@ -14,7 +14,11 @@ const assetReference = [
     title: 'Font (Chakra Petch)',
     link: 'https://fonts.google.com/specimen/Chakra+Petch',
     linkName: 'Google Fonts',
-
+  },
+  {
+    title: 'Random Sprite Quotes',
+    link: 'https://github.com/lukePeavey/quotable',
+    linkName: 'lukePeavey',
   },
   {
     title: 'Pixel Working Sprite',

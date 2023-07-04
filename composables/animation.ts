@@ -71,13 +71,13 @@ function useSpriteDialog(_typeSpeed = 150, _hideDialogTime = 1000) {
   let hideDialogTimeoutId:NodeJS.Timer | '' = ''; 
   let clearDialogTimeoutId:NodeJS.Timer | '' = ''; 
   // Create dialog function
-  function speakDialog(_dialog:string, typeSpeed: number | false = _typeSpeed, hideDialogTime: number | false = _hideDialogTime) {
+  function speakDialog(_dialog:string, typeSpeed: number | false = _typeSpeed, hideDialogTime: number | false = _hideDialogTime, events?: { onDone?: CallableFunction }) {
     resetDialog();
     dialog.value = '';
     showDialog.value = true;
     dialogRunning.value = !!typeSpeed;
     !typeSpeed 
-      ? dialog.value = _dialog
+      ? dialog.value = _dialog && (events?.onDone && events?.onDone())
       : dialogId.value = setInterval(()=>{
         if (dialog.value === _dialog) {
           clearInterval(dialogId.value);
@@ -85,9 +85,12 @@ function useSpriteDialog(_typeSpeed = 150, _hideDialogTime = 1000) {
             hideDialogTimeoutId = setTimeout(()=> {
             showDialog.value = false;
             dialogRunning.value = false;
+            events?.onDone && events?.onDone();
             clearDialogTimeoutId = setTimeout(()=>{ 
               dialog.value = '';}, 1000 );
             } , hideDialogTime);
+          } else {
+            events?.onDone && events?.onDone();
           }
         return;
         } 

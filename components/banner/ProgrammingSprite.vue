@@ -35,12 +35,36 @@ const continousCoding = [
   // ...lookininWindowSprite,
   // ...lookininWindowSprite,
 ].reverse();
-const programming = useSpriteAnimation(continousCoding);
 
+const programming = useSprite({ animation: [continousCoding] }); 
 
 function stopCoding(stop: boolean) {
-  if (stop) programming.runAnimation(lookininWindowSprite, true);
-  else programming.runAnimation(continousCoding);
+  if (stop) {
+    programming.runAnimation(lookininWindowSprite, true);
+  } 
+  else {
+    if (!programming.dialogRunning.value) {
+      programming.runAnimation(continousCoding);
+    }
+  }
+}
+
+function speakQuotes() {
+  if (programming.dialogRunning.value) return;
+  const thingkingDiags = [
+    'Hmm...',
+    'Let me think...',
+    'Perhaps...',
+    'Perhaps...',
+  ]
+  programming.speakDialog(thingkingDiags[Math.floor(Math.random()*4)], 100, 3000);
+  setTimeout( async ()=> {
+    const response = await fetch('https://api.quotable.io/quotes/random?maxLength=70')
+    const data = await response.json();
+    const quote = data[0].content;
+    programming.speakDialog(quote, 50, 1000, { onDone: ()=>stopCoding(false) });
+  }, 500)
+  
 }
 
 /** Cat Logic */
@@ -102,13 +126,34 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
     <!-- Coding Sprite -->
     <div 
       class="
+        cursor-pointer select-none
         w-full h-full absolute top-0 left-0 
         bg-no-repeat
         bg-[url('@/assets/img/sprites/programming-sprite-hd.png')] 
         bg-[length:auto_120%] 
+        hover:brightness-110
       "
       :style="{ backgroundPosition: `${programming.currentFrame.value.x} ${programming.currentFrame.value.y}` }"
+      @mouseenter="stopCoding(true)"
+      @mouseleave="stopCoding(false)"
+      @click="speakQuotes"
     >
+      <!-- Programming Dialog -->
+      <span
+        class="
+          select-none
+          px-1
+          absolute bottom-[80%] left-24
+          bg-primary-900/25 dark:bg-primary-500/25 md:bg-primary-900/10 dark:md:bg-transparent 
+          md:text-[10px] 2xl:text-xs
+          text-primary-200 
+          transition-all
+          drop-shadow-md
+        "
+        :class="programming.showDialog.value ? 'opacity-100' : 'opacity-0'"
+      >
+       {{ programming.dialog.value }}
+      </span>
     </div>
 
     <!-- Cat Sprite-->
@@ -120,7 +165,7 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
         bg-[url('@/assets/img/sprites/cat.png')] 
         bg-[length:auto_100%] 
         drop-shadow-md
-        dark:brightness-90
+        dark:brightness-90 hover:brightness-110
         animate-interactable hover:animate-none
       "
       :style="{ backgroundPosition: `${cat.currentFrame.value.x} ${cat.currentFrame.value.y}` }"
