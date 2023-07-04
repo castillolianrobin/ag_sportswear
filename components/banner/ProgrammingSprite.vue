@@ -62,6 +62,7 @@ function speakQuotes() {
     const response = await fetch('https://api.quotable.io/quotes/random?maxLength=70')
     const data = await response.json();
     const quote = data[0].content;
+    stopCoding(true);
     programming.speakDialog(quote, 50, 1000, { onDone: ()=>stopCoding(false) });
   }, 500)
   
