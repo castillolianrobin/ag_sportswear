@@ -51,6 +51,7 @@ function stopCoding(stop: boolean) {
 
 function speakQuotes() {
   if (programming.dialogRunning.value) return;
+  
   const thingkingDiags = [
     'Hmm...',
     'Let me think...',
@@ -58,6 +59,7 @@ function speakQuotes() {
     'Perhaps...',
   ]
   programming.speakDialog(thingkingDiags[Math.floor(Math.random()*4)], 100, 3000);
+  
   setTimeout( async ()=> {
     const response = await fetch('https://api.quotable.io/quotes/random?maxLength=70')
     const data = await response.json();
@@ -135,8 +137,6 @@ watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode act
         hover:brightness-110
       "
       :style="{ backgroundPosition: `${programming.currentFrame.value.x} ${programming.currentFrame.value.y}` }"
-      @mouseenter="stopCoding(true)"
-      @mouseleave="stopCoding(false)"
       @click="speakQuotes"
     >
       <!-- Programming Dialog -->
