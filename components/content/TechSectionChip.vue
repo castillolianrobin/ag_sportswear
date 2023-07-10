@@ -43,7 +43,7 @@
             shadow
             skew-x-12
             transition-all
-            animate-[shineMovement_5s_linear_infinite]
+            animate-[shineMovement_2.5s_steps(10)_infinite]
           "
         ></div>
           

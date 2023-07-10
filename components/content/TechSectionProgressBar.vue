@@ -31,7 +31,7 @@ const props = defineProps({
             block 
             h-full w-full 
             bg-primary-500 dark:bg-primary-600
-            animate-[progressBarPulse_2s_linear_infinite]
+            animate-[progressBarPulse_2s_steps(5)_infinite]
             border-2 border-primary-700 dark:border-primary-400
           "
           :style="{ animationDelay: `0.${rating}s` }"
@@ -62,12 +62,12 @@ const props = defineProps({
           :style="{ backgroundColor: `${props.color || '#555555EE' }AA` }"
         ></div>
         <!-- Icon -->
-        <div class="h-full flex-shrink-0">
+        <div class="h-full flex-shrink-0 aspect-square">
           <NuxtImg
             :src="props.img"
             height="30px"
             width="30px"
-            class="p-1 h-full aspect-square drop-shadow-md brightness-110"
+            class="p-1 w-full aspect-square drop-shadow-md brightness-110"
             :alt="props.title"
           />
         </div>

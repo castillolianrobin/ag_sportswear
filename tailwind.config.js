@@ -75,8 +75,8 @@ module.exports = {
         },
         shineMovement: {
           '0%': { left: '-20%', opacity: 1, },
-          '7%': { left: '120%', opacity: 0.6, },
-          '8%, 100%': { left: '-20%', opacity: 0.0, }
+          '15%': { left: '120%', opacity: 0.6, },
+          '16%, 100%': { left: '-20%', opacity: 0.0, }
         },
         interactableBlinking: {
           '0%': { filter: 'brightness(100%)' },
