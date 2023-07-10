@@ -76,7 +76,7 @@ const assetReference = [
   >
 
     <!-- Contact Me -->
-    <div class="md:sr-only pt-[70px] -mt-[130px] mb-10">
+    <div class="md:sr-only -mt-5 -translate-y-1/2">
       <div 
         class="
           p-3 px-10 w-fit

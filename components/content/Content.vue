@@ -141,7 +141,8 @@ function isActive(sectionName: SectionName) {
           bg-[url('@/assets/img/pixel-bg-2.jpg')] 
           bg-blend-overlay
           min-h-full
-        ">
+        "
+      >
         <component
           v-for="(section) in sections"
           :key="section.key"
