@@ -18,7 +18,7 @@ const props = defineProps({
       p-5
       cursor-pointer
       bg-primary-200 dark:bg-primary-950
-      md:border border-primary-500 dark:border-primary-700
+      border border-primary-500 dark:border-primary-700
       overflow-hidden shadow
       transition-all
     "
