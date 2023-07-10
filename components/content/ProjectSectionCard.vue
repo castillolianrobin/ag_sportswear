@@ -25,15 +25,15 @@ const props = defineProps({
     :href="props.link"
     target="_blank"
   >
-    <div class="flex flex-col md:flex-row gap-5">
+    <div class="flex items-center md:items-start gap-5">
       <!-- Image -->
-      <div class="w-full md:w-1/4 flex-shrink-0 flex">
+      <div class="w-1/4 flex-shrink-0 flex">
         <NuxtImg 
           :src="props.img" 
           :alt="props.title"
           width="200px"
           height="200px"
-          class="m-auto w-full aspect-video md:aspect-square object-cover" 
+          class="m-auto w-full aspect-square object-cover" 
         />
       </div>
 
@@ -93,7 +93,7 @@ const props = defineProps({
       <span 
         v-for="techStack in props.stack"
         :key="`${props.title}-${techStack}`"
-        class="px-3 rounded-full text-sm shadow"
+        class="px-3 rounded-full text-xs md:text-sm shadow"
         :style="{ 
           backgroundColor: techStack?.color,
           color: techStack?.accentColor || 'white'  
