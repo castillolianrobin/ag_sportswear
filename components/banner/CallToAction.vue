@@ -50,8 +50,7 @@ function scrollToElement(id: SectionName)  {
     <!-- Controls -->
     <div 
       class="
-        ml-1
-        py-2 2xl:py-7 pl-2 
+        py-2 2xl:py-7 
         relative
         hidden md:flex 
         flex-col items-start justify-stretch gap-0 2xl:gap-5 

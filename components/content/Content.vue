@@ -74,27 +74,36 @@ function isActive(sectionName: SectionName) {
   >
     <!-- Title Container -->
     <div 
-      class="mb-5 hidden md:flex gap-3"
-      :class="showContent ? 'visible' : 'invisible'"
+      class="
+        py-2 px-4
+        w-fit 
+        hidden md:flex gap-5  
+        rounded-t-2xl
+        bg-primary-600 dark:bg-primary-400
+        dark:text-primary-950 text-primary-200
+        overflow-hidden
+      "
+      :class="showContent ? 'transition-all visible delay-100 opacity-100 translate-y-0' : 'invisible opacity-0 translate-y-full'"
     >
-      <div class="flex items-center">
-        <button
-          class="group w-5 h-5 bg-primary-200 dark:bg-primary-600 aspect-square shadow font-bold overflow-hidden dark:text-secondary-200"
-          @click="emits('update:activeSection', null)"
-        >
-          <span class="group-hover:-translate-y-full block transition-transform">-</span>
-          <span class="group-hover:-translate-y-full block transition-transform font-light">&#10006;</span>
-        </button>
-      </div>
       <h3 
         class="
-          text-primary-950 dark:text-primary-200
-          text-2xl
+          text-xl
           drop-shadow-sm shadow-white
+          truncate
         "
       >
         {{ sectionNameComputed }}
       </h3>
+      <!-- Close Icon -->
+      <div class="flex items-center">
+        <button
+          class="group w-5 h-5 aspect-square font-bold overflow-hidden"
+          @click="emits('update:activeSection', null)"
+        >
+          <span class="group-hover:-translate-y-full block transition-transform font-light">&#10006;</span>
+          <span class="group-hover:-translate-y-full block transition-transform">-</span>
+        </button>
+      </div>
     </div>
 
     <!-- Content -->
@@ -105,16 +114,23 @@ function isActive(sectionName: SectionName) {
         relative 
         text-secondary-950 dark:text-secondary-100
         md:border lg:border-2  2xl:border-4 border-primary-600 dark:border-primary-400 
-        md:rounded
+        md:rounded md:rounded-tl-none
         overflow-auto scrollbar
-        transition-all duration-200 
+        transition-all duration-200 ease-in-out 
         shadow
       "
-      :class="`${ 
-        showContent 
-          ? 'md:scale-100 md:opacity-100 ease-in-out' 
-          : 'md:scale-50 md:opacity-0' 
-      }`"
+      :class="`
+        ${
+          !activeSection
+            ? 'md:scale-0 md:-translate-x-[110%] md:translate-y-[10%]'
+            : ''
+        }
+        ${
+          showContent 
+            ? 'md:scale-100 md:opacity-100 ease-in-out' 
+            : 'md:scale-50 md:opacity-0' 
+        }
+      `"
     >
       <div 
         class="

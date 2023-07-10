@@ -15,25 +15,25 @@ const props = defineProps({
   <a 
     class="
       group/project-card
-      p-2
+      p-5
       cursor-pointer
       bg-primary-200 dark:bg-primary-950
-      border-primary-500
-      overflow-hidden rounded shadow
+      border border-primary-500 border-primary-700
+      overflow-hidden shadow
       transition-all
     "
     :href="props.link"
     target="_blank"
   >
-    <div class="flex gap-3">
+    <div class="flex flex-col md:flex-row gap-5">
       <!-- Image -->
-      <div class="w-1/4 flex-shrink-0">
+      <div class="w-full md:w-1/4 flex-shrink-0 flex">
         <NuxtImg 
           :src="props.img" 
           :alt="props.title"
           width="200px"
           height="200px"
-          class="aspect-square object-cover" 
+          class="m-auto w-full aspect-video md:aspect-square object-cover" 
         />
       </div>
 
@@ -82,14 +82,14 @@ const props = defineProps({
          {{  props.ownership || 'Uncategorized Ownership' }}
         </p>
         <!-- Description -->
-        <p class="text-secondary-600 dark:text-secondary-400 text-sm">
+        <p class="hidden md:block text-secondary-600 dark:text-secondary-400 text-sm">
           {{ props.description || 'No Description'  }}
         </p>
       </div>
     </div>
 
     <!-- Stack Badges -->
-    <div class="my-3 flex flex-wrap gap-3 text-secondary-200">
+    <div class="mt-3 flex flex-wrap gap-3 text-secondary-200">
       <span 
         v-for="techStack in props.stack"
         :key="`${props.title}-${techStack}`"
