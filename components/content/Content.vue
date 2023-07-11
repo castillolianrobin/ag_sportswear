@@ -78,7 +78,7 @@ function isActive(sectionName: SectionName) {
         py-2 px-4
         w-fit 
         hidden md:flex gap-5  
-        rounded-t-2xl
+        rounded-t
         bg-primary-600 dark:bg-primary-400
         dark:text-primary-950 text-primary-200
         overflow-hidden
