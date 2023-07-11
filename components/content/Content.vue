@@ -121,11 +121,6 @@ function isActive(sectionName: SectionName) {
       "
       :class="`
         ${
-          !activeSection
-            ? 'md:scale-0 md:-translate-x-[110%] md:translate-y-[10%]'
-            : ''
-        }
-        ${
           showContent 
             ? 'md:scale-100 md:opacity-100 ease-in-out' 
             : 'md:scale-50 md:opacity-0' 
