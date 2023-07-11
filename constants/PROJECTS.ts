@@ -29,6 +29,18 @@ export const PROJECTS = [
     ]
   },
   {
+    title: 'Snake Game',
+    description: 'Classic snake game using Vue composition API',
+    img: '/projects/snake.png',
+    ownership: 'Personal Project',
+    link: 'https://lian-neon-snake.netlify.app/',
+    stack: [
+      TECHONOLOGIES.VUE, 
+      TECHONOLOGIES.TYPESCRIPT,
+      TECHONOLOGIES.TAILWIND, 
+    ]
+  },
+  {
     title: 'Sample Pokedex',
     description: 'Basic UI Implementation for 3rd party API courtesy of https://pokeapi.co.',
     img: '/projects/pokedex-sample.png',
