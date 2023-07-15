@@ -29,7 +29,7 @@ export const PROJECTS = [
     ]
   },
   {
-    title: 'Snake Game',
+    title: 'Retro Snake',
     description: 'Classic snake game using Vue composition API',
     img: '/projects/snake.png',
     ownership: 'Personal Project',
