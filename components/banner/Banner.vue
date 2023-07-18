@@ -16,8 +16,6 @@ onMounted(()=>{
       class="
         absolute top-0 
         w-full h-full 
-        bg-[url('@/assets/img/placeholder-bg.jpg')] 
-        bg-bottom bg-cover 
         blur
       "
     >
@@ -55,7 +53,9 @@ onMounted(()=>{
           "
         ></div>
         <!-- Programming Sprite -->
-        <BannerProgrammingSprite></BannerProgrammingSprite>
+        <ClientOnly>
+          <BannerProgrammingSprite></BannerProgrammingSprite>
+        </ClientOnly>
       </div>
   
       <!-- Loading -->
