@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { SectionName } from './components/content/Content.vue';
 
-
 /** SEO */
 useSeoMeta({
   title: 'Lian Robin',
@@ -15,7 +14,19 @@ useSeoMeta({
   ogUrl: 'https://www.castillolianrobin.vercel.app',
 });
 
+await preloadComponents('LoadingScreen')
+
 const activeSection = ref<SectionName | null>(null)
+const contentReady = ref(0);
+const showContent = ref(false);
+const CONTENT_COUNT = 2;
+
+function openContent() {
+  contentReady.value += 1
+  if (contentReady.value === CONTENT_COUNT) {
+    showContent.value = true;
+  }
+}
 
 </script>
 
@@ -24,6 +35,14 @@ const activeSection = ref<SectionName | null>(null)
     id="app" 
     class="bg-primary-300 dark:bg-primary-950"
   >
+
+    
+
+    <!-- Intro -->
+    <LoadingScreen 
+      :hide-loading="showContent"
+    ></LoadingScreen>
+    
     <!-- Header -->
     <Header
       class="opacity-0 animate-fadeIn"
@@ -31,38 +50,20 @@ const activeSection = ref<SectionName | null>(null)
     
     <!-- Main Content  -->
     <div class="relative">
-      <Banner></Banner>
+      <Banner @ready="openContent"></Banner>
       
-      <BannerCallToAction
+      <LazyBannerCallToAction
         v-model:active-section="activeSection"
         class="opacity-0 animate-fadeIn"
-      ></BannerCallToAction>
+      ></LazyBannerCallToAction>
     </div>
 
     <!-- Content -->
     <Content 
       v-model:active-section="activeSection"
       class="opacity-0 animate-fadeIn"
+      @ready="openContent"
     ></Content>
-    
-
-    <!-- Intro -->
-    <div 
-      class="
-        z-20 
-        fixed top-0 left-0 
-        w-full h-full
-        flex items-center justify-center
-        bg-primary-200/25 dark:bg-primary-950/25
-        backdrop-blur-xl
-        animate-blurIn
-      "
-    >
-      <BannerCallToActionNameCard 
-        hide-extra
-        class="p-2 scale-125 bg-primary-200/90 dark:bg-primary-950/90 shadow"
-      ></BannerCallToActionNameCard>
-    </div>
 
   </div>
 </template>

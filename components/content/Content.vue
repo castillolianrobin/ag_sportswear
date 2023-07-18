@@ -4,6 +4,7 @@ import AboutSection from './AboutSection.vue';
 import TechSection from './TechSection.vue';
 import ProjectSection from './ProjectSection.vue';
 import FooterSection from './FooterSection.vue';
+import { emit } from 'process';
 
 export type SectionName = 'stack' | 'projects' | 'about' | 'footer';
 
@@ -15,7 +16,8 @@ const props = defineProps({
 });
 
 
-const emits = defineEmits(['update:activeSection']);
+
+const emits = defineEmits(['update:activeSection', 'ready']);
 
 
 /** Internal Logic */
@@ -57,6 +59,7 @@ function isActive(sectionName: SectionName) {
   return props.activeSection === sectionName;
 }
 
+onMounted(()=>{ emits('ready', true) })
 
 </script>
 

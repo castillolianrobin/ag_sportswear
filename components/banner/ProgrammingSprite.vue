@@ -116,6 +116,12 @@ const CAT_DIALOG_CLICK_ME_DARK = 'Can\'t see anything? Click me to go light';
 setTimeout(()=> cat.speakDialog(isDark.value ? CAT_DIALOG_CLICK_ME_DARK : CAT_DIALOG_CLICK_ME_LIGHT, 100, 2000), 5000);
 
 watch(isDark, ()=>cat.speakDialog(`${ isDark.value ? 'Dark' : 'Light' } mode activated`, 100, 2000) );
+
+
+// onMounted(()=>{
+//   console.log('sprite ready');
+// })
+
 </script>
 
 <template>

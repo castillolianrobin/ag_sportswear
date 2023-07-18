@@ -2,6 +2,12 @@
 
 const loading = ref(false);
 
+const emits = defineEmits(['ready'])
+
+onMounted(()=>{
+  emits('ready', true);
+});
+
 </script>
 
 <template>
