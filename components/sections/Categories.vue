@@ -19,11 +19,17 @@ const CATEGORIES = [
   <section class="flex flex-col gap-5">
     <!-- Categories  -->
     <div>
-      <h3 class="text-lg">
+      <h3 class="mb-3 text-lg">
         Shop by Category
       </h3>
 
-      <div class="flex gap-5 overflow-auto w-full items-stretch scrollbar">
+      <div 
+        class="
+          w-full 
+          flex items-stretch gap-3 
+          overflow-auto scrollbar
+        "
+      >
         <div 
           v-for="category in CATEGORIES"
           class="
@@ -44,10 +50,16 @@ const CATEGORIES = [
 
     <!-- Top Trending -->
     <div>
-      <h3 class="text-lg uppercase">
+      <h3 class="mb-3 text-lg uppercase">
         Top Trending
       </h3>
 
+      <div class="flex gap-5">
+        <SectionsCategoriesProductCard
+          v-for="item in 5"
+          :key="item"
+        ></SectionsCategoriesProductCard>
+      </div>
     </div>
   </section>
 </template>
