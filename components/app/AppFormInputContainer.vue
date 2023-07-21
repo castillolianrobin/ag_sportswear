@@ -26,7 +26,6 @@ const colorInactive = computed(():ThemeColors => {
       :class="[`
           px-1 py-0.5
           flex
-          rounded
           text-sm
           border border-${colorInactive} group-focus-within:border-${props.color}
           outline-1 outline-${props.color} group-focus-within:outline 
