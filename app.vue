@@ -2,11 +2,11 @@
 
 /** SEO */
 useSeoMeta({
-  title: 'Lian Robin',
-  // ogTitle: "AG Sportswear",
-  // ogType: 'website',
-  // description: 'AG Sportswear',
-  // ogDescription: 'AG Sportswear',
+  title: 'AG Sportsware',
+  ogTitle: "AG Sportswear",
+  ogType: 'website',
+  description: 'AG Sportswear',
+  ogDescription: 'AG Sportswear',
   // ogImage: '',
   // twitterImage: '',
   // twitterCard: 'summary_large_image',
