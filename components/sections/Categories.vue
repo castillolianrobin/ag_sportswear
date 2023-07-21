@@ -23,10 +23,14 @@ const CATEGORIES = [
         Shop by Category
       </h3>
 
-      <div class="flex gap-5">
+      <div class="flex gap-5 overflow-auto w-full items-stretch scrollbar">
         <div 
           v-for="category in CATEGORIES"
-          class="flex-grow flex-shrink"
+          class="
+            min-w-[100px] md:min-w-0
+            flex-grow flex-shrink 
+            flex flex-col 
+          "
         >
           <img 
             :src="category.img" 

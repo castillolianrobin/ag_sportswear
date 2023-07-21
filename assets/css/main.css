@@ -11,7 +11,7 @@ html, body, #app {
 
 html::-webkit-scrollbar, .scrollbar::-webkit-scrollbar {
   width: 0.6vw;
-  height: 10px;  
+  height: 6px;  
   opacity: 0.91;
   /* background-color: ; */
 }
@@ -33,7 +33,7 @@ html::-webkit-scrollbar-thumb, .scrollbar::-webkit-scrollbar-thumb {
 }
 
 html::-webkit-scrollbar-thumb:hover, .scrollbar::-webkit-scrollbar-thumb:hover {
-  /* @apply bg-primary-700; */
+  @apply bg-primary-500/50;
 }
 
 

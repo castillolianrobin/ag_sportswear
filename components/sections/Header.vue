@@ -6,7 +6,11 @@ const NAV_ITEMS = [
   { name: 'Sports' },
   { name: 'Brands' },
   { name: 'Category' },
-]
+];
+
+// (mobile) 
+const showHeader = ref(false);
+const showSubItem = ref(false);
 </script>
 <template>
   <header 
@@ -19,7 +23,10 @@ const NAV_ITEMS = [
     "
   >
     <!-- Hamburger (Mobile) -->
-    <div class="md:hidden">
+    <div 
+      class="md:hidden"
+      @click="showHeader = !showHeader"  
+    >
       <Icon name="solar:list-outline" size="32" />
     </div>
     <!-- Logo -->
@@ -31,7 +38,30 @@ const NAV_ITEMS = [
       />
     </div>
     <!-- Logo And Nav -->
-    <div class="col-span-2 hidden  md:grid grid-cols-2  items-center gap-5">
+    <div 
+      class="
+        bg-white z-50
+        col-span-2 
+        fixed md:relative left-0 top-0
+        w-full h-full
+        flex flex-col md:grid grid-cols-2 items-start md:items-center gap-5
+        transition-transform
+      "
+      :class="{
+        'translate-x-0': showHeader,
+        '-translate-x-full md:translate-x-0': !showHeader,
+      }"
+    >
+
+      <!-- Close Icon(Mobile) -->
+      <div class="absolute top-0 right-0 md:hidden">
+        <Icon 
+          name="material-symbols:close" 
+          size="20"
+          @click="showHeader = false" 
+        />
+      </div>
+
       <!-- Logo -->
       <img 
         src="/assets/logo-full.png" 
@@ -40,8 +70,11 @@ const NAV_ITEMS = [
       />
 
       <!-- Navigation -->
-      <div class="group ">
-        <div class="flex gap-5">
+      <div 
+        @mouseover="showSubItem = true" 
+        @mouseout="showSubItem = false"
+      >
+        <div class="flex flex-col md:flex-row gap-5">
           <span
             v-for="navItem in NAV_ITEMS"
             :key="navItem.name"
@@ -54,22 +87,27 @@ const NAV_ITEMS = [
             {{  navItem.name  }}
           </span>
         </div>
-        
-        <!-- Subitems -->
-        <div 
-          class="
-            py-5
-            w-full
-            border-t border-primary-500
-            absolute top-full left-0
-            bg-white
-            hidden 
-            group-hover:flex justify-center gap-20
-          "
-        >
+      </div>
+    </div>
+
+    <!-- Subitems -->
+    <div 
+      class="
+        py-5
+        w-full
+        border-t border-primary-500
+        absolute top-full left-0
+        bg-white
+        hidden
+      "
+      :class="{
+        'md:flex justify-center gap-20': showSubItem,
+      }"
+    >
 
           <div 
             v-for="subItems in 5"
+            :key="subItems"
           >
             <!-- Subitem title -->
             <h3 class="text-sm font-bold">Shoes</h3>
@@ -83,12 +121,11 @@ const NAV_ITEMS = [
 
           </div>
         </div>
-      </div>
-    </div>
 
     
     <!-- Helpers -->
     <div class="flex gap-3 justify-end items-center">
+      <!-- Search Field -->
       <AppFormInput
         placeholder="Search"
         class="hidden md:block"
@@ -97,7 +134,12 @@ const NAV_ITEMS = [
           <Icon name="mdi-light:magnify" size="20" />
         </template>
       </AppFormInput>
-
+      
+      <!-- Search Icon (Mobile) -->
+      <div class="md:hidden">
+        <Icon name="mdi-light:magnify" size="24" />
+      </div>
+      
       <div>
         <Icon name="uil:cart" size="24" />
       </div>

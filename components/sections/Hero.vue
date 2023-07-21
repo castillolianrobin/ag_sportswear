@@ -1,7 +1,6 @@
 <template>
   <section 
     class="
-      p-5
       border
       relative
       w-full md:h-[90vh]
@@ -35,20 +34,23 @@
     <!-- Call to action -->
     <div 
       class="
-        mt-auto
+        mt-auto p-5
         relative
-        w-[585px] 
+        w-full md:w-[585px]
+        flex flex-col gap-5
       "
     >
-      <h1 class="uppercase text-5xl">
+      <h1 class="uppercase text-3xl md:text-5xl">
         This season's biggest drop of new gear
       </h1>
-      <p class="w-[407px]">
+      <p class="w-full md:w-[407px]">
         Get your hands on our latest and greatest gear and technology— all built to make you better.
       </p>
-      <AppButton class="px-5">
-        Shop New Arrivals
-      </AppButton>
+      <div>
+        <AppButton class="px-5">
+          Shop New Arrivals
+        </AppButton>
+      </div>
     </div>
   </section>
 </template>
