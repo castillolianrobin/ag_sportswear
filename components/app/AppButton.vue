@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { themedColorProps, useThemedColor } from '@/composables';
+import { themedColorProps, useThemedColor } from '../../composables';
 import { computed, type ButtonHTMLAttributes, type PropType, toRef, unref } from 'vue';
 import type { RouteLocationRaw } from 'vue-router';
-// import { AppLoading } from './';
 
 export type SizeProp = 'lg' | 'md' | 'sm';
 export type VariantProp = 'solid' | 'outline' | 'text';
@@ -15,7 +14,6 @@ const props = defineProps({
   variant: { type: String as PropType<VariantProp>, default: 'solid', required: false },
   ...themedColorProps,
   to: [String, Object] as PropType<RouteLocationRaw>,
-  href: String,
 });
 
 /** Theme color composable */
@@ -27,7 +25,7 @@ const { color } = useThemedColor(toRef(props, 'color'));
 const sizeClass = computed(()=>{
   switch (props.size) {
     case 'lg': return 'text-lg py-1.5 px-2.5';  
-    case 'sm': return 'text-sm px-1';  
+    case 'sm': return 'text-sm px-1 py-0.5';  
     case 'md': default: return 'py-1 px-2';
   }
 });
@@ -56,14 +54,7 @@ const textClass = computed(()=>{
 </script>
 
 <template>
-  <component 
-    :is="
-      props.to && !props.disabled 
-        ? 'RouterLink' 
-        : props.href && !props.disabled 
-          ? 'a' 
-          : 'button'
-        "
+  <component :is="props.to && !props.disabled ? 'RouterLink' : 'button'"
     :class="[ 
       ...[ sizeClass, bgClass, textClass, borderClass ],
       `focus:outline-${color}/25 outline-2`,
@@ -78,18 +69,14 @@ const textClass = computed(()=>{
     class="
       relative
       flex items-center justify-center
-      rounded border-2
+      border-2
       transition
+      font-light
       disabled:opacity-75
     "
     :aria-busy="props.loading"
     v-bind="{ ...props }"
   >
-    <!-- <AppLoading 
-      v-if="props.loading"
-      class="absolute"
-      v-bind="{ color }"
-    ></AppLoading> -->
     <span :class="{ 'opacity-0': props.loading }">
       <slot></slot>
     </span>
